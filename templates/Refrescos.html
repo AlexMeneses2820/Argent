@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'Herencias/header.html' %}
+
+    <!-- contenido -->
+    <div class="content-wrapper">
+            <!--cartas cabezera-->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0"><strong><i>Refrescos</i></strong></h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item" ><a href="index.html"><strong><i>inicio</i></strong></a></li>
+                <li class="breadcrumb-item active"><i>DE L'ARGENT </i></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Contentenido -->
+  
+    <section class="content">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <!-- Default box -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"><strong><i>Refresco</i></strong></h3>
+
+              </div>
+              <div class="card-body">
+                <div>
+    
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Coca cola.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Cocacola<br>12 unidades</i></strong></p></ul>
+          
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Pepsi.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Pepsi<br>12 unidades</i></strong></p></ul>
+          
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/sprite.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Sprite <br>12 unidades</i></strong></p></ul>
+          
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Energizante.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Energizantes <br>12 unidades</i></strong></p></ul>
+          
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Cerveza.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Cerveza<br>12 unidades</i></strong></p></ul>
+          
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Hit.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Hit <br>12 unidades</i></strong></p></ul>
+          
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Fanta.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Fanta<br>12 unidades</i></strong></p></ul>
+
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Gatorade.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Gatorade<br>32 unidades</i></strong></p></ul>
+                
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Postobon.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Postobon<br>50 unidades</i></strong></p></ul>
+                
+                  <ul style="float: left;"><img  class="direct-chat-img" src="{% static 'img/Productos/Refrescos/Mr. tea.jpg' %}" alt="mensaje de imagen de usuario"style="height: 60px; width: 60px;"> <p style="padding-left: 100px;padding-top: 6px;"><strong><i>Mr. tea<br>20 unidades</i></strong></p></ul>
+              </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <td>
+                  <a class="nav-link" id="vert-tabs-home-tab" data-toggle="pill" href="#refresco" role="tab" aria-controls="vert-tabs-home" aria-selected="false"> <button type="button" class="btn btn-block btn-outline-info">Agregar nuevo producto</button>
+                </td>
+                <div class="tab-pane fade" id="refresco" role="tabpanel" aria-labelledby="vert-tabs-profile-tab">
+                  <div class="card card-info">
+                    <div class="card-header">
+                      <h3 class="card-title">Inscripción de productos</h3>
+                    </div>
+                    <div class="card-body">        
+                      <!-- Color Picker -->
+                      <div class="form-group">
+                        <label>Agregar producto</label>
+      
+                        <div class="input-group my-colorpicker2 colorpicker-element" data-colorpicker-id="2">
+                          <input type="text" class="form-control" data-original-title="" title="">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fab fa-shopify"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Cantidad</label>
+      
+                        <div class="input-group my-colorpicker2 colorpicker-element" data-colorpicker-id="2">
+                          <input type="number" class="form-control" data-original-title="" title="">
+                          <span class="input-group-append">
+                            <button type="submit" class="btn btn-success">Agregar</button>
+                          </span>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-sort-numeric-up-alt"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  </div>
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    
+    {% include 'Herencias/footer.html' %}
+</body>
+</html>

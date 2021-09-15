@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DE L'ARGENT</title>
+  <!-- Google Font: Source Sans Pro -->
+  <script src="{% static 'https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js' %}"></script>
+  <link rel="shortcut icon" href="{% static 'img/Icono principal.svg' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700display=fallback' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href=" {% static 'lib/plugins/fontawesome-free/css/all.min.css'%} ">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'lib/dist/css/adminlte.min.css' %}">
+</head>
+    <body class="login-page" style="min-height: 466px;">
+
+        <div class="login-box">
+            
+          <!-- /.login-logo -->
+          <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+            <a href="index.html" class="h1"></a><strong><i>DE L'ARGENT</i></strong></a> <img src="{% static 'img/Icono principal.svg' %}" alt="">
+            </div>
+            <div class="card-body">
+              <p class="login-box-msg">Inicia tu Sección con Nosotros</p>
+        
+              <form action="index.html" method="post">
+                <div class="input-group mb-3">
+                  <input type="email" class="form-control" placeholder="Correo electronico">
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class= "far fa-envelope"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <input type="password" class="form-control" placeholder="Contraseña">
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-user-lock"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8">
+                    <div class="icheck-primary">
+                      <input type="checkbox" id="remember">
+                      <label for="remember">
+                    Recordar
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-4">
+                    <a href="Bienvenida.html"type="submit" class="btn btn-primary btn-block">Acceder</a>
+                  </div>
+                  <!-- /.col -->
+                </div>
+              </form>
+        
+              <div class="social-auth-links text-center mt-2 mb-3">
+                <a href="#" class="btn btn-block btn-primary">
+                  <i class="fab fa-facebook mr-2"></i> Inicia sesión con Facebook
+                </a>
+                <a href="#" class="btn btn-block btn-danger">
+                  <i class="fab fa-google-plus mr-2"></i> Inicia sesión con Google+
+                </a>
+              </div>
+              <!-- /.social-auth-links -->
+        
+              <p class="mb-1">
+                <a href="Olvide-contraseña.html">Olvidé mi contraseña</a>
+              </p>
+              <p class="mb-0">
+                <a href="Registro.html" class="text-center">Registrar como un nuevo usuario</a>
+              </p>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.login-box -->
+        
+        <!-- jQuery -->
+
+        <script src="{% static 'lib/plugins/jquery/jquery.min.js' %}"></script>
+        <!-- Bootstrap 4 -->
+        <script src="{% static 'lib/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <!-- AdminLTE App -->
+        <script src="{% static 'lib/dist/js/adminlte.min.js' %}"></script>
+        
+        
+</body>
+</html>

@@ -1,0 +1,362 @@
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DE L'ARGENT</title>
+  <!-- Google Font: Source Sans Pro -->
+  <script src="{% static 'https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js' %}"></script>
+  <link rel="shortcut icon" href="{% static 'img/Icono principal.svg' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'lib/plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'lib/dist/css/adminlte.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/dist/css/adminlte.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/sweetalert2-9.10.0/sweetalert2.min.js' %}">
+{% block javascript %}
+
+{% endblock %}
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <!-- animación-->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="{% static 'img/Ave animacion.png' %}" alt="AdminLTELogo" height="60" width="60">
+    </div>
+
+    <nav class="main-header navbar navbar-expand-md navbar-light navbar-white dropdown-legacy border-bottom-0">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img src="{% static 'img/Icono principal.svg' %}" alt="DE L'ARGENT " class="brand-image img-circle elevation-3" style="opacity: .8">
+          <span class="brand-text font-weight-light">DE L'ARGENT </span>
+        </a>
+
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+              <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+              <a href="Contactos.html" class="nav-link">Contactos</a>
+            </li>
+          </ul>
+          <!-- SEARCH FORM -->
+          <form class="form-inline ml-0 ml-md-3">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Buscar" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right navbar links -->
+        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+
+      <!-- Mensajes Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">4</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="Chat.html" class="dropdown-item">
+            <!-- Raúl Álvarez Genes -->
+            <div class="media">
+              <img src="{% static 'img/Usuarios principales/Auron.jpeg' %}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Raúl Álvarez Genes
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Recuerda la reunión que tenemos en la tarde</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  hace 4 horas</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="Chat.html" class="dropdown-item">
+            <!-- Mensaje de Maria -->
+            <div class="media">
+              <img src="{% static 'img/Usuarios principales/Maria.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Maria Isabel P.
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Necesito los informes de ventas antes del martes</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  hace 4 horas</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="Chat.html" class="dropdown-item">
+            <!-- Mensaje de Melissa -->
+            <div class="media">
+              <img src="{% static 'img/Usuarios principales/Melissa.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Melissa Yapura
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">¿Puedes explicarme el funcionamiento del software?</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> hace 4 horas</p>
+              </div>
+            </div>
+            <!-- Message End -->
+            <div class="dropdown-divider"></div>
+            <a href="Chat.html" class="dropdown-item">
+              <!-- Mensaje de Jazmine -->
+              <div class="media">
+                <img src="{% static 'img/Usuarios principales/Jazmine.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Jazmine Herrera Catalano
+                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">Hola Alex, Deseó obtener el software que han desarrollado</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  hace 8 horas</p>
+                </div>
+              </div>
+              <!-- Message End -->
+
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="Chat.html" class="dropdown-item dropdown-footer">Ver todos los mensajes</a>
+        </div>
+      </li>
+
+        <!-- Notificaciones -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notificaciones</span>
+            <div class="dropdown-divider"></div>
+            <a href="Notificacion.html" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 nuevos mensajes
+              <span class="float-right text-muted text-sm">hace 3 minutos</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="Notificacion.html" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 recomendaciones
+              <span class="float-right text-muted text-sm"> hace 12 horas</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="Notificacion.html" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 reportes
+              <span class="float-right text-muted text-sm">hace 2 dias</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="Notificacion.html" class="dropdown-item dropdown-footer">Ver todas las notificaciones</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+      <!-- Logo -->
+      <a href="index.html" class="brand-link">
+        <img src="{% static 'img/Icono principal.svg' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">DE L'ARGENT</span>
+      </a>
+
+      <!-- Personas creadoras y nombre de proyecto -->
+      <div class="sidebar">
+        <!-- Personas creadoras y nombre de proyecto -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="{% static 'img/Foto de perfil.svg' %}" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="perfil.html" class="d-block">Alex Meneses <BR>Diego <BR>Andres Gonzales </a>
+          </div>
+
+      </div>
+
+      <!-- Busqueda -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Buscar" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Principal -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+          with font-awesome or any other icon font library -->
+          <li class="nav-header">Modulos</li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Inicio
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="perfil.html" class="nav-link">
+              <i class="nav-icon far fa-user"></i>
+              <p>
+                Perfil
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Contactos.html" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Contactos
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Chat.html" class="nav-link">
+              <i class="nav-icon far fa-comments"></i>
+              <p>
+                Chat
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="Notificacion.html" class="nav-link">
+              <i class="nav-icon far fa-bell"></i>
+              <p>
+                Notificaciones
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-align-left"></i>
+              <p>
+                Opciones
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="categoria.html" class="nav-link">
+                  <i class="nav-icon fas fa-circle-notch"></i>
+                  <p>Categorias</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="productos.html" class="nav-link">
+                  <i class="nav-icon fas fa-circle-notch"></i>
+                  <p>Productos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="ventas.html" class="nav-link">
+                  <i class="nav-icon fas fa-circle-notch"></i>
+                  <p>Ventas</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="Promociones.html" class="nav-link">
+                  <i class="nav-icon fas fa-circle-notch"></i>
+                  <p>Promociones</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        <li class="nav-header">Configuración</li>
+
+
+
+        <li class="nav-item">
+          <a href="editarPerfil.html" class="nav-link">
+            <i class="nav-icon fas fa-user-circle"></i>
+            <p>
+              Editar perfil
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="iniciar_sesion.html" class="nav-link">
+            <i class="nav-icon fas fa-address-card"></i>
+            <p>
+              Iniciar sesión
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="Registro.html" class="nav-link">
+            <i class="nav-icon fas fa-key "></i>
+            <p>
+              Registro
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="cambiarContrasenna.html" class="nav-link">
+            <i class="nav-icon fas fa-wrench"></i>
+            <p>
+              Cambiar contraseña
+            </p>
+          </a>
+        </li>
+
+
+
+        </ul>
+      </nav>
+      </div>
+    </aside>
