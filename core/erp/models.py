@@ -13,8 +13,6 @@ class Categoria(models.Model):
         verbose_name_plural = 'Categorias'
         ordering = ['id']
 
-
-
 class product(models.Model):
     name = models.CharField(max_length=150, verbose_name='Nombre', unique=True)
     cate = models.ForeignKey(Categoria, on_delete=models.CASCADE)

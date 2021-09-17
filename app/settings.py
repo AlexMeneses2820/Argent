@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks',
     'core.erp',
-    #'core.Inico'
+    'core.Inicio'
 ]
 
 MIDDLEWARE = [
