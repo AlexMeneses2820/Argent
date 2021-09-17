@@ -1,8 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-{% include 'Herencias/header.html' %}
+{% include 'header.html' %}
 
     <!-- contenido -->
     <div class="content-wrapper">
@@ -46,7 +43,7 @@
                   El siguiente reporte se hara durante los proximos 15 dias.
                 </div>
 
-                <img src="{% static 'img/Index/Grafica.png' %}" alt="" style="width: 1000px;">
+                <img src="img/Index/Grafica.png" alt="" style="width: 1000px;">
               </div>
 
               <!-- /.card-footer-->
@@ -57,9 +54,9 @@
       </div>
     </section>
 
-    </div>
 
     </div>
-    {% include 'Herencias/footer.html' %}
-</body>
-</html>
+    
+    </div>
+    
+{% include 'footer.html' %}

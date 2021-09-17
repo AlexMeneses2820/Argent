@@ -1,4 +1,6 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,20 +8,15 @@
   <!-- Google Font: Source Sans Pro -->
   <script src="{% static 'https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js' %}"></script>
   <link rel="shortcut icon" href="{% static 'img/Icono principal.svg' %}" type="image/x-icon">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700display=fallback">
+  <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700display=fallback' %}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{% static 'lib/plugins/fontawesome-free/css/all.min.css' %}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'lib/dist/css/adminlte.min.css' %}">
-  <link rel="stylesheet" href="{% static 'lib/dist/css/adminlte.min.css' %}">
-  <link rel="stylesheet" href="{% static 'lib/sweetalert2-9.10.0/sweetalert2.min.js' %}">
-{% block javascript %}
-
-{% endblock %}
-
+</head>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-  <div class="wrapper">
+   <div class="wrapper">
     <!-- animación-->
     <div class="preloader flex-column justify-content-center align-items-center">
       <img class="animation__shake" src="{% static 'img/Ave animacion.png' %}" alt="AdminLTELogo" height="60" width="60">
@@ -183,12 +180,6 @@
 
     </nav>
 
-
-          <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-              <i class="fas fa-th-large"></i>
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -210,7 +201,7 @@
             <img src="{% static 'img/Foto de perfil.svg' %}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="perfil.html" class="d-block">Alex Meneses Builes <BR>Diego Garcia <BR>Andres Gonzales </a>
+            <a href="perfil.html" class="d-block">Alex Meneses <br>Andres Gonzales</br></a>
           </div>
 
       </div>
@@ -353,8 +344,6 @@
             </p>
           </a>
         </li>
-
-
 
         </ul>
       </nav>

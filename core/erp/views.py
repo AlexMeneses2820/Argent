@@ -2,9 +2,6 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
-def ManualDLArgent(request):
-    return render(request, 'Herencias/index2.html')
-
 def Bienvenida(request):
     return render(request, 'Bienvenida.html')
 

@@ -816,7 +816,7 @@ function Sizzle( selector, context, results, seed ) {
 						}
 					}
 
-				// category selector
+				// Type selector
 				} else if ( match[ 2 ] ) {
 					push.apply( results, context.getElementsByTagName( selector ) );
 					return results;

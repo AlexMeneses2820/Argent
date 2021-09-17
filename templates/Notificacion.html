@@ -1,8 +1,6 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% include 'header.html' %}
 
-{% include 'Herencias/header.html' %}
     <!-- contenido -->
     <div class="content-wrapper">
             <!--cartas cabezera-->
@@ -26,7 +24,7 @@
     <div class="card card-widget">
       <div class="card-header">
         <div class="user-block">
-          <img class="img-circle" src="{% static 'img/Foto de perfil.svg' %}" alt="User Image">
+          <img class="img-circle" src="img/Foto de perfil.svg" alt="User Image">
           <span class="username"><a href="perfil.html">Alex Meneses <BR>Andres Gonzales</a></span>
           <span class="description">Compartiste 3 imagenes</span>
         </div>
@@ -42,10 +40,12 @@
       <!-- /.card-header -->
       <div class="card-body">
 
+
+
         <div class="row">
           <div class="col-md-12 col-lg-6 col-xl-4">
             <div class="card mb-2 bg-gradient-dark">
-              <img class="card-img-top" src="{% static 'img/Paisajes/Positano.jpg' %}" alt="Dist Photo 1"style="height: 263PX;">
+              <img class="card-img-top" src="img/Paisajes/Positano.jpg" alt="Dist Photo 1"style="height: 263PX;">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
                 <h5 class="card-title text-primary text-white"><strong>Positano</strong></h5>
                 <p class="card-text text-black pb-2 pt-1">Positano es quizás el pueblo más conocido y uno de los más bellos de la Costa Amalfitana, zona declarada Patrimonio de la Humanidad.</p>
@@ -55,7 +55,7 @@
           </div>
           <div class="col-md-12 col-lg-6 col-xl-4">
             <div class="card mb-2">
-              <img class="card-img-top" src="{% static 'img/Paisajes/Barcelona.jpg' %}" alt="Dist Photo 2" style="height: 263PX;">
+              <img class="card-img-top" src="img/Paisajes/Barcelona.jpg" alt="Dist Photo 2" style="height: 263PX;">
               <div class="card-img-overlay d-flex flex-column justify-content-center">
                 <h5 class="card-title text-white mt-5 pt-2">Barcelona </h5>
                 <p class="card-text pb-2 pt-1 text-white">
@@ -67,7 +67,7 @@
           </div>
           <div class="col-md-12 col-lg-6 col-xl-4">
             <div class="card mb-2">
-              <img class="card-img-top" src="{% static 'img/Paisajes/Noruega.jpeg' %}" alt="Dist Photo 3"  style="height: 263PX;">
+              <img class="card-img-top" src="img/Paisajes/Noruega.jpeg" alt="Dist Photo 3"  style="height: 263PX;">
               <div class="card-img-overlay">
                 <h5 class="card-title text-primary">Noruega</h5>
                 <p class="card-text pb-1 pt-1 text-white">
@@ -89,7 +89,7 @@
       <!-- /.card-footer -->
       <div class="card-footer">
         <form action="#" method="post">
-          <img class="img-fluid img-circle img-sm" src="{% static 'img/Foto de perfil.svg' %}" alt="Alt Text">
+          <img class="img-fluid img-circle img-sm" src="img/Foto de perfil.svg" alt="Alt Text">
           <!-- .img-push is used to add margin to elements next to floating images -->
           <div class="img-push">
             <input type="text" class="form-control form-control-sm" placeholder="Comentar">
@@ -102,7 +102,7 @@
     <div class="card card-widget">
       <div class="card-header">
         <div class="user-block">
-          <img class="img-circle" src="{% static 'img/Usuarios principales/Auron.jpeg' %}" alt="User Image">
+          <img class="img-circle" src="img/Usuarios principales/Auron.jpeg" alt="User Image">
           <span class="username"><a href="#">Raúl Álvarez Genes</a></span>
           <span class="description">Compartio publicidad - 7:30 PM Ayer</span>
         </div>
@@ -142,7 +142,7 @@
       <!-- /.card-footer -->
       <div class="card-footer">
         <form action="#" method="post">
-          <img class="img-fluid img-circle img-sm" src="{% static 'img/Foto de perfil.svg' %}" alt="Alt Text">
+          <img class="img-fluid img-circle img-sm" src="img/Foto de perfil.svg" alt="Alt Text">
           <!-- .img-push is used to add margin to elements next to floating images -->
           <div class="img-push">
             <input type="text" class="form-control form-control-sm" placeholder="Comentar">
@@ -156,7 +156,7 @@
     <div class="card card-widget">
       <div class="card-header">
         <div class="user-block">
-          <img class="img-circle" src="{% static 'img/Usuarios principales/Maria.jpeg' %}" alt="User Image">
+          <img class="img-circle" src="img/Usuarios principales/Maria.jpeg" alt="User Image">
           <span class="username"><a href="#">Maria Isabel P.</a></span>
           <span class="description">Compartio publicidad - Hace 2 dias</span>
         </div>
@@ -190,7 +190,7 @@
       <!-- /.card-footer -->
       <div class="card-footer">
         <form action="#" method="post">
-          <img class="img-fluid img-circle img-sm" src="{% static 'img/Foto de perfil.svg' %}" alt="Alt Text">
+          <img class="img-fluid img-circle img-sm" src="img/Foto de perfil.svg" alt="Alt Text">
           <!-- .img-push is used to add margin to elements next to floating images -->
           <div class="img-push">
             <input type="text" class="form-control form-control-sm" placeholder="Comentar">
@@ -204,7 +204,7 @@
         <div class="card card-widget">
           <div class="card-header">
             <div class="user-block">
-              <img class="img-circle" src="{% static 'img/Usuarios principales/Juan Manuel.jpeg' %}" alt="User Image">
+              <img class="img-circle" src="img/Usuarios principales/Juan Manuel.jpeg" alt="User Image">
               <span class="username"><a href="#">Juan Manuel Barranco Padilla</a></span>
               <span class="description">Te menciono en un comentario - Hace 3 dias</span>
             </div>
@@ -235,7 +235,7 @@
           <!-- /.card-footer -->
           <div class="card-footer">
             <form action="#" method="post">
-              <img class="img-fluid img-circle img-sm" src="{% static 'img/Foto de perfil.svg' %}" alt="Alt Text">
+              <img class="img-fluid img-circle img-sm" src="img/Foto de perfil.svg" alt="Alt Text">
               <!-- .img-push is used to add margin to elements next to floating images -->
               <div class="img-push">
                 <input type="text" class="form-control form-control-sm" placeholder="Comentar">
@@ -249,7 +249,7 @@
     <div class="card card-widget">
       <div class="card-header">
         <div class="user-block">
-          <img class="img-circle" src="{% static 'img/Usuarios principales/Melissa.jpeg' %}" alt="User Image">
+          <img class="img-circle" src="img/Usuarios principales/Melissa.jpeg" alt="User Image">
           <span class="username"><a href="#">Melissa Yapura</a></span>
           <span class="description">Posteó 5 fotos - hace 5 dias</span>
         </div>
@@ -271,19 +271,19 @@
         <div class="row mb-3" >
           <div class="col-sm-6">
             <p><strong><i>Adjunto  fotos para futuros proyectos</i></strong></p>
-            <img class="img-fluid" src="{% static 'img/Compras/Compras.svg' %}" alt="Photo"style="height: 150px;">
+            <img class="img-fluid" src="img/Compras/Compras.svg" alt="Photo"style="height: 150px;">
           </div>
           <!-- Imagenes menores izquierda -->
           <div class="col-sm-6">
             <div class="row">
               <div class="col-sm-6">
-                <img class="img-fluid mb-3" src="{% static 'img/Compras/Compras 1.png' %}" alt="Photo"style="height:  150px;">
-                <img class="img-fluid" src="{% static 'img/Compras/Compras 3.svg' %}" alt="Photo"style="height:  150px;">
+                <img class="img-fluid mb-3" src="img/Compras/Compras 1.png" alt="Photo"style="height:  150px;">
+                <img class="img-fluid" src="img/Compras/Compras 3.svg" alt="Photo"style="height:  150px;">
               </div>
               <!-- Imagenes menores derecha -->
               <div class="col-sm-6">
-                <img class="img-fluid mb-3" src="{% static 'img/Compras/Compras 4.svg' %}" alt="Photo"style="height:  150px;">
-                <img class="img-fluid" src="{% static 'img/Compras/Compras 2.png' %}" alt="Photo"style="height:  150px;">
+                <img class="img-fluid mb-3" src="img/Compras/Compras 4.svg" alt="Photo"style="height:  150px;">
+                <img class="img-fluid" src="img/Compras/Compras 2.png" alt="Photo"style="height:  150px;">
               </div>
               <!-- /.col -->
             </div>
@@ -302,7 +302,7 @@
       <!-- /.card-footer -->
       <div class="card-footer">
         <form action="#" method="post">
-          <img class="img-fluid img-circle img-sm" src="{% static 'img/Foto de perfil.svg' %}" alt="Alt Text">
+          <img class="img-fluid img-circle img-sm" src="img/Foto de perfil.svg" alt="Alt Text">
           <!-- .img-push is used to add margin to elements next to floating images -->
           <div class="img-push">
             <input type="text" class="form-control form-control-sm" placeholder="Comentar">
@@ -317,7 +317,7 @@
         <div class="card card-widget">
           <div class="card-header">
             <div class="user-block">
-              <img class="img-circle" src="{% static 'img/Usuarios principales/Soporte Tecnico.png' %}" alt="User Image">
+              <img class="img-circle" src="img/Usuarios principales/Soporte Tecnico.png" alt="User Image">
               <span class="username"><a href="#">Soporte tecnico</a></span>
               <span class="description">Envio un mensaje<- Hace 5 dias</span>
             </div>
@@ -346,7 +346,7 @@
           <!-- /.card-footer -->
           <div class="card-footer">
             <form action="#" method="post">
-              <img class="img-fluid img-circle img-sm" src="{% static 'img/Foto de perfil.svg' %}" alt="Alt Text">
+              <img class="img-fluid img-circle img-sm" src="img/Foto de perfil.svg" alt="Alt Text">
               <!-- .img-push is used to add margin to elements next to floating images -->
               <div class="img-push">
                 <input type="text" class="form-control form-control-sm" placeholder="Comentar">
@@ -362,7 +362,7 @@
     <div class="card card-widget">
       <div class="card-header">
         <div class="user-block">
-          <img class="img-circle" src="{% static 'img/Usuarios principales/Edgar Granados.jpeg' %}" alt="User Image">
+          <img class="img-circle" src="img/Usuarios principales/Edgar Granados.jpeg" alt="User Image">
           <span class="username"><a href="#">Edgar Granados.</a></span>
           <span class="description">Subio nuevas fotos- Hace 7 dias</span>
         </div>
@@ -382,13 +382,13 @@
                       <div class="row mb-3">
                         <div class="col-sm-6">
                           <!-- Imagenes menores izquierda -->
-                          <img class="img-fluid" src="{% static 'img/Fotos Edgar/Analista 2.svg' %}" alt="Photo" style="height: 150px;">
+                          <img class="img-fluid" src="img/Fotos Edgar/Analista 2.svg" alt="Photo" style="height: 150px;">
                         </div>
                             <!-- Imagenes menores derecha -->
                             <div class="col-sm-6">
                               <div class="row">
                             <div class="col-sm-6">
-                              <img class="img-fluid mb-3" src="{% static 'img/Fotos Edgar/Analista 4.svg' %}" alt="Photo" style="height: 150px;">
+                              <img class="img-fluid mb-3" src="img/Fotos Edgar/Analista 4.svg" alt="Photo" style="height: 150px;">
                             </div>
                             <!-- /.col -->
                           </div>
@@ -405,7 +405,7 @@
       <!-- /.card-footer -->
       <div class="card-footer">
         <form action="#" method="post">
-          <img class="img-fluid img-circle img-sm" src="{% static 'img/Foto de perfil.svg' %}" alt="Alt Text">
+          <img class="img-fluid img-circle img-sm" src="img/Foto de perfil.svg" alt="Alt Text">
           <!-- .img-push is used to add margin to elements next to floating images -->
           <div class="img-push">
             <input type="text" class="form-control form-control-sm" placeholder="Comentar">
@@ -418,6 +418,4 @@
 
   </div>
     
-    {% include 'Herencias/footer.html' %}
-</body>
-</html>
+ {% include 'footer.html' %}

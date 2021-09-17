@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from core.erp.views import Azucar, ManualDLArgent, Bienvenida, cambiarcontraseña, Carnes, Categorias, Chat, Contacto, \
+from core.erp.views import Azucar, Bienvenida, cambiarcontraseña, Carnes, Categorias, Chat, Contacto, \
     EditarPerfil, Frutas, Granos, Iniciar_seccion, Lacteos, Notificaciones, Olvide_contraseña, Perfil, Productos, \
     Promociones, Refrescos, Registro, Venta
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('core.Inico.urls')),
+    #path('', include('core.Inico.urls')),
     path('Bienvenida/', Bienvenida),
     path('cambiarcontraseña/', cambiarcontraseña),
     path('Carnes/', Carnes),
