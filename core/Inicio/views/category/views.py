@@ -42,6 +42,7 @@ class Category_ListView(ListView):
         context = super().get_context_data(**kwargs)
         context['title']= 'Personas dirijidas'
         context['create_url'] = reverse_lazy('add_programdores')
+        context['list_url'] = reverse_lazy('inicio')
         return context
 
 class CategoryCreateView(CreateView):

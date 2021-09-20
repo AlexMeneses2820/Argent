@@ -50,11 +50,10 @@
                  {% endfor %}
 
     {% if form.errors %}
-    Swal.fire({
-  title: 'Error!',
-  text: errors,
+       Swal.fire({
   icon: 'error',
-
+  title: 'Oops...',
+  text: '⚠️Hay un error!⚠️',
 })
     {% endif %}
 
