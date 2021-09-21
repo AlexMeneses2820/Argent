@@ -6,7 +6,7 @@ def Bienvenida(request):
     return render(request, 'Bienvenida.html')
 
 def cambiarcontraseña(request):
-    return render(request, 'cambiarContrasenna.html')
+    return render(request, 'category/Cargos.html')
 
 def Carnes(request):
     return render(request, 'Carnes.html')

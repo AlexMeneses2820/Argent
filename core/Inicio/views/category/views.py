@@ -6,7 +6,7 @@ from django.views.generic import ListView,CreateView
 from django.shortcuts import render,redirect
 from django.utils.decorators import method_decorator
 
-from core.Inicio.forms import CategoryForm
+from core.Inicio.forms import *
 from core.Inicio.models import Empleados,Cargos
 
 def categoriry_list(request):
@@ -41,8 +41,9 @@ class Category_ListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title']= 'Personas dirijidas'
-        context['create_url'] = reverse_lazy('add_programdores')
-        context['list_url'] = reverse_lazy('inicio')
+        context['create_url'] = reverse_lazy('Nuevo-Usuario')
+        context['list_url'] = reverse_lazy('Cargos')
+
         return context
 
 class CategoryCreateView(CreateView):
@@ -50,7 +51,6 @@ class CategoryCreateView(CreateView):
     form_class = CategoryForm
     template_name = 'category/create.html'
     success_url = reverse_lazy('inicio')
-
 #Metodo post
     #def post(self, request, *args, **kwargs):
      #   print(request.POST)
@@ -62,10 +62,20 @@ class CategoryCreateView(CreateView):
         #context= self.get_context_data(**kwargs)
         #context['form']=form
         #return render(request,self.template_name,context)
-
-
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title']= 'Añadir personas'
         return context
+
+class CagosCreateView(CreateView):
+    model = Cargos
+    form_class = CargosForm
+    template_name = 'category/Cargos.html'
+    success_url = reverse_lazy('inicio')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Añadir Nuevos Cargos'
+        context['list_url'] = reverse_lazy('Cargos')
+        return context
+

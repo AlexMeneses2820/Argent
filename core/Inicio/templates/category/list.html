@@ -25,12 +25,29 @@
          </tr>
      {% endfor %}
      </tbody>
-    </table>
-    </div>
+
+    <tfoot>
+        <td>
     <div class="card-footer">
-        <a href="{{ create_url }}" class="btn btn-outline-success btn-flat btnTest"><i class="fas fa-plus"></i>
+        <a href="{{ create_url }}" class="btn btn-block btn-outline-success btn-flat btnTest"><i class="fab fa-autoprefixer"></i>
             Nuevo registro
         </a>
+
+    </td>
+    <td>
+    <div class="card-footer">
+        <a href="{{ list_url }}" class="btn btn-block btn-outline-success btn-flat btnTest"><i class="fab fa-autoprefixer"></i>
+            Nuevo Cargo
+        </a>
+    </div>
+    </td>
+
+    </tfoot>
+    </table>
+    </div>
+
+
+
     </div>
 
 {% endblock %}

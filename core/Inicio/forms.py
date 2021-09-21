@@ -1,6 +1,6 @@
 from django.forms import *
 
-from core.Inicio.models import Empleados
+from core.Inicio.models import Empleados, Cargos
 
 
 class CategoryForm(ModelForm):
@@ -20,6 +20,21 @@ class CategoryForm(ModelForm):
                     'autocomplate':'off'
                 }
             ),
+        },
 
+class CargosForm(ModelForm):
+    def __init__(self,*args,**kwargs):
+        super().__init__(*args,**kwargs)
 
-        }
+    class Meta:
+        model= Cargos
+        fields='__all__'
+        widgets = {
+            'name': TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Ingrese un Nuevo Cargo',
+                    'autocomplate':'off'
+                }
+            ),
+        },

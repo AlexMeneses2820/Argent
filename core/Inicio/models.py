@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 class Cargos(models.Model):
-    name = models.CharField(max_length=150, verbose_name='Cargo')
+    name = models.CharField(max_length=150, verbose_name='Cargo', unique=True)
     date_joined = models.DateTimeField(default=datetime.now, verbose_name='Fecha de creacion')
     def __str__(self):
         return self.name
