@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse,HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
-from django.views.generic import ListView,CreateView
+from django.views.generic import ListView,CreateView,UpdateView,DeleteView
 from django.shortcuts import render,redirect
 from django.utils.decorators import method_decorator
 
@@ -79,3 +79,25 @@ class CagosCreateView(CreateView):
         context['list_url'] = reverse_lazy('Cargos')
         return context
 
+class CategoryUpdateView(UpdateView):
+    model = Empleados
+    form_class = CategoryForm
+    template_name = 'category/create.html'
+    success_url = reverse_lazy('inicio')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Editar personas'
+        context['action']= 'Edit'
+        return context
+
+class CategoryDeleteView(DeleteView):
+    model = Empleados
+    template_name = 'category/delete.html'
+    success_url = reverse_lazy('inicio')
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Eliminar Usuario'
+        return context

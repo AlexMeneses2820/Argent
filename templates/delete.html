@@ -1,0 +1,52 @@
+{% extends 'body.html' %}
+
+{% block content %}
+{% load widget_tweaks %}
+<form method="post" action=".">
+
+    <div class="card card-info">
+            <div class="content-wrapper">
+            <!--cartas cabezera-->
+                  <div class="content-header">
+                    <div class="container-fluid">
+                        <h3 class="card-title"><i class="fab fa-accessible-icon"></i> {{ title }}</h3>
+                      </div>
+                      <div class="card-body">
+                        <!-- Color Picker -->
+                          {% csrf_token %}
+
+
+                      {% if form.errors  %}
+
+                      <div class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h5><i class="icon fas fa-ban"></i> Hay un error</h5>
+                      <ul>
+                 {% for field in form %}
+                 {% for error in field.errors %}
+                 <li>{{ error }}</li>
+                 {% endfor %}
+                 {% endfor %}
+                 </ul>
+                </div>
+
+                      {% endif %}
+                      <br>
+                          <div class="alert alert-danger alert-dismissible">
+                  <h5><i class="icon fas fa-ban"></i> ⚠!Notificacion!⚠</h5>
+                  ¿Estas seguro de eliminar al usuario {{ object.name }} de la lista?
+                </div>
+                      </div>
+                    <button type="submit" class="btn btn-block btn-outline-info btn-sm"><i class="fas fa-user-times"></i>
+                        Si,aceptar<i class="fas fa-user-times"></i>
+                    </button>
+
+                  <a href="{% url 'inicio' %}" class="btn btn-block btn-outline-danger btn-sm"><i class="fas fa-exclamation-circle"></i>
+                        No,Cancelar<i class="fas fa-exclamation-circle"></i>
+                    </a>
+
+                        </div>
+</form>
+
+
+{% endblock %}

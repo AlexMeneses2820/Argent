@@ -19,8 +19,8 @@
              <td>{{ e.date_joined }}</td>
              <td>{{ e.Estado }}</td>
              <td>{{ e.Cargos }}</td>
-             <td><button type="button" class="btn btn-primary btn-xs"><i class="fas fa-edit"></i></button>
-                 <button type="button" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i></button>
+             <td><a href="{% url 'Update' e.id %}" class="btn btn-primary btn-xs"><i class="fas fa-edit"></i></a>
+                 <a href="{% url 'Delete' e.id %}" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i></a>
              </td>
          </tr>
      {% endfor %}
