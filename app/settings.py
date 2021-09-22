@@ -38,8 +38,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
+    # Mis Apps
     'core.erp',
-    'core.Inicio'
+    'core.Inicio',
+    'core.Alerta',
+    'core.Categorias',
+    'core.Chat',
+    'core.Contactos',
+    'core.Notificaciones',
+    'core.Perfil',
+    'core.Productos',
+    'core.Promociones',
+    'core.Ventas',
 ]
 
 MIDDLEWARE = [
