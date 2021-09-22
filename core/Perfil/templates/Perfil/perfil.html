@@ -12,7 +12,7 @@
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="index.html"><strong><i>inicio</i></strong></a></li>
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}"><strong><i>inicio</i></strong></a></li>
             <li class="breadcrumb-item active"><i>DE L'ARGENT </i></li>
           </ol>
         </div>
@@ -35,21 +35,7 @@
                 <br>Andres Gonzales
               </h3>
 
-              <p class="text-muted text-center">Desarollador de Software</p>
-
-              <ul class="list-group list-group-unbordered mb-3">
-                <li class="list-group-item">
-                  <b>Seguidores</b> <a class="float-right">56,045</a>
-                </li>
-                <li class="list-group-item">
-                  <b>Siguiendo</b> <a class="float-right">1,159</a>
-                </li>
-                <li class="list-group-item">
-                  <b>Amigos</b> <a class="float-right">29,790</a>
-                </li>
-              </ul>
-
-              <a href="#" class="btn btn-primary btn-block"><b>Seguir</b></a>
+              <p class="text-muted text-center">Desarolladores de Software</p>
             </div>
             <!-- /.card-body -->
           </div>
@@ -101,173 +87,13 @@
           <div class="card">
             <div class="card-header p-2"><!-- cabezera -->
               <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Actividad</a></li>
+
                 <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Notificaciones</a></li>
                 <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Ajustes</a></li>
               </ul>
             </div>
             <div class="card-body">
               <div class="tab-content">
-                <div class="tab-pane active" id="activity"><!-- Usuarios -->
-
-                  <!-- Post Auron -->
-                  <div class="post">
-                    <div class="user-block">
-                      <img class="img-circle img-bordered-sm" src="{% static 'img/Usuarios principales/Auron.jpeg' %}" alt="user image">
-                      <span class="username">
-                        <a href="#">Raúl Álvarez Genes</a>
-                        <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
-                      </span>
-                      <span class="description">Compartio publicidad - 7:30 PM Ayer</span>
-                    </div>
-                    <!-- /.user-block -->
-                    <p>
-                      <strong><i>Frases Iconicas</i></strong>
-                      <ol type="A"><i>
-                        <li>Calvoo</li>
-                        <li>Abduzcan</li>
-                        <li>Te quiero nene</li>
-                        <li>Tengo miedo</li>
-                        <li>Yo no soy rico, soy un pobre con dinero</li>
-                        <li>Hola cerebro, estás ahí? «su llamada no puede se procesada»</li>
-                        <li>Yo soy un Antisistema yo rompo las reglas</li>
-                        <li>Vamos a morir todos!</li></i>
-                      </ol>
-                    </p>
-
-                    <p>
-                      <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Compartir</a>
-                      <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Me gusta</a>
-                      <span class="float-right">
-                        <a href="#" class="link-black text-sm">
-                          <i class="far fa-comments mr-1"></i> Comentarios (24,276)
-                        </a>
-                        <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Me gustas (2,631,564)</a>
-                      </span>
-                    </p>
-
-                    <input class="form-control form-control-sm" type="text" placeholder="Comentar">
-                  </div>
-                  <!-- /.post -->
-
-                  <!-- Post Maria -->
-                  <div class="post">
-                    <div class="user-block">
-                      <img class="img-circle img-bordered-sm" src="{% static 'img/Usuarios principales/Maria.jpeg' %}" alt="user image">
-                      <span class="username">
-                        <a href="#"> Maria Isabel P.</a>
-                        <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
-                      </span>
-                      <span class="description">Compartio publicidad - Hace 2 dias</span>
-                    </div>
-                    <!-- /.user-block -->
-                    <p>
-                      <strong>Convocatoria</strong>
-                      <br>
-                      Convoco a la directiva de la empresa para solicitar los informes mensuales de cada área administrativa de la empresa, asi como el conocimiento general de la empresa y el comportamiento del software y efectos que ha tenido con las ganancias y perdidas de productos
-                      <br>
-                      <i>P.D.: Soy lo mas hermoso del mundo caramba!</i>
-                    </p>
-
-                    <p>
-                      <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Compartir</a>
-                      <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Me gusta</a>
-                      <span class="float-right">
-                        <a href="#" class="link-black text-sm">
-                          <i class="far fa-comments mr-1"></i> Comentarios (159)
-                        </a>
-                        <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Me gustas (2,735)</a>
-                      </span>
-                    </p>
-
-                    <input class="form-control form-control-sm" type="text" placeholder="Comentar">
-                  </div>
-
-                  <!-- Post Juan Manuel-->
-                  <div class="post clearfix">
-                    <div class="user-block">
-                      <img class="img-circle img-bordered-sm" src="{% static 'img/Usuarios principales/Juan Manuel.jpeg' %}" alt="User Image">
-                      <span class="username">
-                        <a href="#">Juan Manuel Barranco Padilla</a>
-                        <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
-                      </span>
-                      <span class="description">Te menciono en un comentario - Hace 3 dias</span>
-                    </div>
-                    <!-- /.user-block -->
-
-                    
-                    <p>
-                      <strong>licitaciones</strong>
-                      <br>
-                      Mi empresa tiene un personal experimentado y cuento con los productos necesarios para la satisfacción de la empresa y retro alimentación para el programa que ustedes están utilizando para la administración y control del inventario ,somos una empresa nueva en el mercado, aun asi tenemos el personal con la experiencia necesaria para ofrecerles un servicio eficiente y de la mejor calidad
-                    </p>
-                    <p>
-                      <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Compartir</a>
-                      <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Me gusta</a>
-                      <span class="float-right">
-                        <a href="#" class="link-black text-sm">
-                          <i class="far fa-comments mr-1"></i> Comentarios (3,800)
-                        </a>
-                        <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Me gustas (1,524)</a>
-                      </span>
-                    </p>
-
-                    <input class="form-control form-control-sm" type="text" placeholder="Comentar">
-
-                  </div>
-                  <!-- /.post -->
-
-                  <!-- Post Melissa-->
-                  <div class="post">
-                    <div class="user-block">
-                      <img class="img-circle img-bordered-sm" src="{% static 'img/Usuarios principales/Melissa.jpeg' %}" alt="User Image">
-                      <span class="username">
-                        <a href="#">Melissa Yapura</a>
-                        <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
-                      </span>
-                      <span class="description">Posteó 5 fotos - hace 5 dias</span>
-                    </div>
-                    <!-- Imagen mayor -->
-                    <div class="row mb-3">
-                      <div class="col-sm-6">
-                        <p><strong><i>Adjunto  fotos para futuros proyectos</i></strong></p>
-                        <img class="img-fluid" src="{% static 'img/Compras/Compras.svg' %}" alt="Photo">
-                      </div>
-                      <!-- Imagenes menores izquierda -->
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <img class="img-fluid mb-3" src="{% static 'img/Compras/Compras 1.png' %}" alt="Photo">
-                            <img class="img-fluid" src="{% static 'img/Compras/Compras 3.svg' %}" alt="Photo">
-                          </div>
-                          <!-- Imagenes menores derecha -->
-                          <div class="col-sm-6">
-                            <img class="img-fluid mb-3" src="{% static 'img/Compras/Compras 4.svg' %}" alt="Photo">
-                            <img class="img-fluid" src="{% static 'img/Compras/Compras 2.png' %}" alt="Photo">
-                          </div>
-                          <!-- /.col -->
-                        </div>
-                        <!-- /.row -->
-                      </div>
-                      <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-
-                    <p>
-                      <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Compartir</a>
-                      <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Me gusta</a>
-                      <span class="float-right">
-                        <a href="#" class="link-black text-sm">
-                          <i class="far fa-comments mr-1"></i> Comentarios (311)
-                        </a>
-                        <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Me gustas (23,542)</a>
-                      </span>
-                    </p>
-
-                    <input class="form-control form-control-sm" type="text" placeholder="Comentar">
-                  </div>
-                  <!-- /.post -->
-                </div>
                 <!-- Notificación -->
                 <div class="tab-pane" id="timeline">
                   <!-- The timeline -->
@@ -288,7 +114,7 @@
                           Te comento que ese correo es totalmente falso, se trata de una tecnica usada por cyber criminales, para tratar de robar los datos de tu correo, por lo que te recomiendo bloquear al remitente.
                         </div>
                         <div class="timeline-footer">
-                          <a href="../../../Notificaciones/templates/Notificaciones/Notificacion.html" class="btn btn-warning btn-flat btn-sm">Ver comentario</a>
+                          <a href="{% url 'Notificaciones' %}" class="btn btn-warning btn-flat btn-sm">Ver comentario</a>
                         </div>
                       </div>
                     </div>
@@ -321,7 +147,7 @@
                           <i>Amour pour l'aviation</i>
                         </div>
                         <div class="timeline-footer">
-                          <a href="../../../Chat/templates/Chat/Chat.html" class="btn btn-warning btn-flat btn-sm">Ver mensaje</a>
+                          <a href="{% url 'Chat' %}" class="btn btn-warning btn-flat btn-sm">Ver mensaje</a>
                         </div>
                       </div>
                     </div>
@@ -356,7 +182,7 @@
                         <!-- /.row -->
                       </div>
                       <div class="timeline-footer">
-                        <a href="../../../Notificaciones/templates/Notificaciones/Notificacion.html" class="btn btn-warning btn-flat btn-sm">Ver comentario</a>
+                        <a href="{% url 'Notificaciones' %}" class="btn btn-warning btn-flat btn-sm">Ver comentario</a>
                       </div>
                     </div>
 
@@ -401,7 +227,7 @@
                           <img style="height: 160px" src="{% static 'img/Stikers/Stiker Amor.png' %}" alt="">
                         </div>
                         <div class="timeline-footer">
-                          <a href="../../../Chat/templates/Chat/Chat.html" class="btn btn-warning btn-flat btn-sm">Ver mensaje</a>
+                          <a href="{% url 'Chat' %}" class="btn btn-warning btn-flat btn-sm">Ver mensaje</a>
                         </div>
                       </div>
                     </div>

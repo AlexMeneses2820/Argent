@@ -12,7 +12,7 @@
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item" ><a href="index.html"><strong><i>inicio</i></strong></a></li>
+                <li class="breadcrumb-item" ><a href="{% url 'inicio' %}"><strong><i>inicio</i></strong></a></li>
                 <li class="breadcrumb-item active"><i>DE L'ARGENT </i></li>
               </ol>
             </div>
@@ -25,7 +25,7 @@
       <div class="card-header">
         <div class="user-block">
           <img class="img-circle" src="{% static 'img/Foto de perfil.svg' %}" alt="User Image">
-          <span class="username"><a href="../../../Perfil/templates/Perfil/perfil.html">Alex Meneses <BR>Andres Gonzales</a></span>
+          <span class="username"><a href="{% url 'Perfil' %}">Alex Meneses <BR>Andres Gonzales</a></span>
           <span class="description">Compartiste 3 imagenes</span>
         </div>
         <!-- /.user-block -->
@@ -49,7 +49,7 @@
               <div class="card-img-overlay d-flex flex-column justify-content-end">
                 <h5 class="card-title text-primary text-white"><strong>Positano</strong></h5>
                 <p class="card-text text-black pb-2 pt-1">Positano es quizás el pueblo más conocido y uno de los más bellos de la Costa Amalfitana, zona declarada Patrimonio de la Humanidad.</p>
-                <a href="Notificacion.html" class="text-white">Última actualización hace 2 minutos</a>
+                <a href="{% url 'Notificaciones' %}" class="text-white">Última actualización hace 2 minutos</a>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@
                 <p class="card-text pb-2 pt-1 text-white">
                   Es la ciudad perfecta tanto para los amantes de la playa como para los amantes de la montaña. ¡Ni siquiera tendrás que elegir, lo tienes todo! Esto se debe a que Barcelona se encuentra a orillas del mar Mediterráneo y está a la vez rodeada de montañas.
                 </p>
-                <a href="Notificacion.html" class="text-white">Última actualización hace 15 Horas</a>
+                <a href="{% url 'Notificaciones' %}" class="text-white">Última actualización hace 15 Horas</a>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@
                 <h5 class="card-title text-primary">Noruega</h5>
                 <p class="card-text pb-1 pt-1 text-white">
                   Noruega es un gran destino turistico, ya que esta es unica por sus inmensos y bastos paisajes que enamoran y fasinan a quien los observa. </p>
-                <a href="Notificacion.html" class="text-primary">Última actualización hace 21 Horas</a>
+                <a href="{% url 'Notificaciones' %}" class="text-primary">Última actualización hace 21 Horas</a>
               </div>
             </div>
           </div>
@@ -338,10 +338,9 @@
               Lamento que tengas este inconveniente con tu correo, pero juntos lograremos resolverlo. <br>
               Te comento que ese correo es totalmente falso, se trata de una tecnica usada por cyber criminales, para tratar de robar los datos de tu correo, por lo que te recomiendo bloquear al remitente.
             </p>
-
-            <a href="#" class="link-black text-sm">
-              <i class="far fa-comments mr-1"></i> Com{% static 'img/Usuarios principales/Soporte Tecnico.png' %}entarios (200)
-            </a>
+              <a href="#" class="link-black text-sm">
+          <i class="far fa-comments mr-1"></i> Comentarios (2,159)
+        </a>
             <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i>  Me gustas (735)</a>
           <!-- /.card-footer -->
           <div class="card-footer">
