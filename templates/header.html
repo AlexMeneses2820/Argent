@@ -164,17 +164,11 @@
             <a href="{% url 'Notificaciones' %}" class="dropdown-item dropdown-footer">Ver todas las notificaciones</a>
           </div>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-            <i class="fas fa-expand-arrows-alt"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-          </a>
-        </li>
+                        <li class="nav-item">
+                <a class="nav-link" href="{% url 'Logout' %}">
+                    <i class="fas fa-times-circle"></i>
+                </a>
+            </li>
       </ul>
 
     </nav>
@@ -318,7 +312,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="iniciar_sesion.html" class="nav-link">
+          <a href="{% url 'Logout' %}" class="nav-link">
             <i class="nav-icon fas fa-address-card"></i>
             <p>
               Iniciar sesión
