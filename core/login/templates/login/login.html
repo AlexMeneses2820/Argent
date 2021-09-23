@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="{% static 'lib/dist/css/adminlte.min.css' %}">
     <script src="{% static 'lib/sweetalert2-9.10.0/sweetalert2.all.min.js' %}"></script>
 </head>
-    <body class="login-page" style="min-height: 466px;">
+    <body class="login-page" style="min-height: 466px;background: url({% static 'img/Paisajes/Fondo.jpg' %})">
 
         <div class="login-box">
 
@@ -34,7 +34,7 @@
                     {{ form.username|add_class:'form-control'|attr:'autocomplete:off'|attr:'placeholder:Ingrese su username' }}
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
+                            <i class="fas fa-user"></i>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     {{ form.password|add_class:'form-control'|attr:'autocomplete:off'|attr:'placeholder:Ingrese su password' }}
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
+                            <i class="fas fa-unlock-alt"></i>
                         </div>
                     </div>
                 </div>
