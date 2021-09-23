@@ -32,6 +32,7 @@ urlpatterns = [
     path('', include('core.Productos.urls')),
     path('', include('core.Promociones.urls')),
     path('', include('core.Ventas.urls')),
+    path('', include('core.login.urls')),
 
     path('Bienvenida/', Bienvenida),
     path('cambiarcontraseña/', cambiarcontraseña),

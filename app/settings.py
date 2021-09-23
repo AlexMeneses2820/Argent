@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
-    # Mis Apps
     'core.erp',
     'core.Inicio',
     'core.Alerta',
@@ -50,6 +49,7 @@ INSTALLED_APPS = [
     'core.Productos',
     'core.Promociones',
     'core.Ventas',
+    'core.login'
 ]
 
 MIDDLEWARE = [
@@ -139,3 +139,5 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
+
+LOGIN_REDIRECT_URL = 'inicio'
