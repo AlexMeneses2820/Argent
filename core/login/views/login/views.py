@@ -13,10 +13,10 @@ from django.views.generic import FormView, RedirectView
 class LoginFormView(LoginView):
     template_name = 'login/login.html'
 
-  #  def dispatch(self, request, *args, **kwargs):
-   #     if request.user.is_authenticated:
-    #        return redirect('inicio')
-     #   return super().dispatch(request, *args, **kwargs)
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('inicio')
+        return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
