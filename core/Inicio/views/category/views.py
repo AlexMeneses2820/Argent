@@ -24,6 +24,7 @@ class Category_ListView(ListView):
     #@method_decorator(login_required)
 #decorador para la protección de la pagina
     #@method_decorator(csrf_exempt)
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         #Metodo get de recargo de pagina y redirecion al cargar
         #if request.method =='GET':

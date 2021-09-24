@@ -40,23 +40,30 @@
                         Guardar registro
                     </button>
                         </div>
-</form>
-<script>
-{% for field in form %}
-                 {% for error in field.errors %}
-                     var errors='';
-                 errors=='{{ error }}\n';
-                 {% endfor %}
-                 {% endfor %}
+</form>    <script>
+        {% if form.errors %}
+            var errors = '';
+            {% for field in form %}
+                {% for error in field.errors %}
+                    errors += '{{ error }}\n';
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+                errors += '{{ error }}\n';
+            {% endfor %}
+            Swal.fire({
+                title: 'Error!',
+                text: errors,
+                icon: 'error'
+            });
+        {% endif %}
 
-    {% if form.errors %}
-       Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: '⚠️Hay un error!⚠️',
-})
-    {% endif %}
-
-</script>
-
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            var parameters = $(this).serializeArray();
+            submit_with_ajax(window.location.pathname, 'Notificación', '¿Estas seguro de realizar la siguiente acción?', parameters, function () {
+                location.href = '{% url 'inicio' %}';
+            });
+        });
+    </script>
 {% endblock %}
