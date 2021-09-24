@@ -1,0 +1,62 @@
+{% load static %}
+{% include 'header.html' %}
+
+    <!-- contenido -->
+    <div class="content-wrapper">
+            <!--cartas cabezera-->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0"><strong><i>Ventas realizadas</i></strong></h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item" ><a href="{% url 'inicio' %}"><strong><i>inicio</i></strong></a></li>
+                <li class="breadcrumb-item active"><i>DE L'ARGENT </i></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Contentenido -->
+    <section class="content">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <!-- Default box -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <strong><i>Reporte y avisos</i></strong>
+                </h3>
+
+              </div>
+              <div class="card-body">
+                <div class="card-body">
+                  <strong><i>Reporte</i></strong><br>
+                  El sotfware ha disminuido un 60% de peridas evitando la perdia de productos generando beneficios para la empresa.
+                </div>
+                <div class="card-body">
+                  <strong><i>Aviso</i></strong><br>
+                  El siguiente reporte se hara durante los proximos 15 dias.
+                </div>
+
+                <img src="{% static 'img/Index/Grafica.png' %}" alt="" style="width: 1000px;">
+              </div>
+
+              <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    </div>
+    
+    </div>
+    
+{% include 'footer.html' %}

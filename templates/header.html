@@ -15,6 +15,11 @@
   <link rel="stylesheet" href="{% static 'lib/dist/css/adminlte.min.css' %}">
     <script src="{% static 'lib/sweetalert2-9.10.0/sweetalert2.all.min.js' %}"></script>
 
+    <link rel="stylesheet" href="{% static 'lib/jquery-confirm-v3.3.4/jquery-confirm.min.css' %}">
+    <script src="{% static 'lib/jquery-confirm-v3.3.4/jquery-confirm.min.js' %}"></script>
+    <!-- Funciones -->
+    <script src="{% static 'js/functions.js' %}"></script>
+
 </head>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -42,10 +47,10 @@
               <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-              <a href="index.html" class="nav-link">Inicio</a>
+              <a href="{% url 'inicio' %}" class="nav-link">Inicio</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-              <a href="Contactos.html" class="nav-link">Contactos</a>
+              <a href="{% url 'Contactos' %}" class="nav-link">Contactos</a>
             </li>
           </ul>
           <!-- SEARCH FORM -->
@@ -71,7 +76,7 @@
           <span class="badge badge-danger navbar-badge">4</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="Chat.html" class="dropdown-item">
+          <a href="{% url 'Chat' %}" class="dropdown-item">
             <!-- Raúl Álvarez Genes -->
             <div class="media">
               <img src="{% static 'img/Usuarios principales/Auron.jpeg' %}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
@@ -87,7 +92,7 @@
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="Chat.html" class="dropdown-item">
+          <a href="{% url 'Chat' %}" class="dropdown-item">
             <!-- Mensaje de Maria -->
             <div class="media">
               <img src="{% static 'img/Usuarios principales/Maria.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -103,7 +108,7 @@
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="Chat.html" class="dropdown-item">
+          <a href="{% url 'Chat' %}" class="dropdown-item">
             <!-- Mensaje de Melissa -->
             <div class="media">
               <img src="{% static 'img/Usuarios principales/Melissa.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -118,7 +123,7 @@
             </div>
             <!-- Message End -->
             <div class="dropdown-divider"></div>
-            <a href="Chat.html" class="dropdown-item">
+            <a href="{% url 'Chat' %}" class="dropdown-item">
               <!-- Mensaje de Jazmine -->
               <div class="media">
                 <img src="{% static 'img/Usuarios principales/Jazmine.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -136,7 +141,7 @@
 
           </a>
           <div class="dropdown-divider"></div>
-          <a href="Chat.html" class="dropdown-item dropdown-footer">Ver todos los mensajes</a>
+          <a href="{% url 'Chat' %}" class="dropdown-item dropdown-footer">Ver todos los mensajes</a>
         </div>
       </li>
 
@@ -147,37 +152,28 @@
             <span class="badge badge-warning navbar-badge">15</span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-item dropdown-header">15 Notificaciones</span>
             <div class="dropdown-divider"></div>
-            <a href="Notificacion.html" class="dropdown-item">
+            <a href="{% url 'Notificaciones' %}" class="dropdown-item">
               <i class="fas fa-envelope mr-2"></i> 4 nuevos mensajes
-              <span class="float-right text-muted text-sm">hace 3 minutos</span>
+
             </a>
             <div class="dropdown-divider"></div>
-            <a href="Notificacion.html" class="dropdown-item">
+            <a href="{% url 'Notificaciones' %}" class="dropdown-item">
               <i class="fas fa-users mr-2"></i> 8 recomendaciones
-              <span class="float-right text-muted text-sm"> hace 12 horas</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="Notificacion.html" class="dropdown-item">
+            <a href="{% url 'Notificaciones' %}" class="dropdown-item">
               <i class="fas fa-file mr-2"></i> 3 reportes
-              <span class="float-right text-muted text-sm">hace 2 dias</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="Notificacion.html" class="dropdown-item dropdown-footer">Ver todas las notificaciones</a>
+            <a href="{% url 'Notificaciones' %}" class="dropdown-item dropdown-footer">Ver todas las notificaciones</a>
           </div>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-            <i class="fas fa-expand-arrows-alt"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-          </a>
-        </li>
+                        <li class="nav-item">
+                <a class="nav-link" href="{% url 'Logout' %}">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </li>
       </ul>
 
     </nav>
@@ -190,7 +186,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
       <!-- Logo -->
-      <a href="index.html" class="brand-link">
+      <a href="{% url 'inicio' %}" class="brand-link">
         <img src="{% static 'img/Icono principal.svg' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">DE L'ARGENT</span>
       </a>
@@ -203,7 +199,7 @@
             <img src="{% static 'img/Foto de perfil.svg' %}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="perfil.html" class="d-block">Alex Meneses <br>Andres Gonzales</br>Diego Alegandro Garcia</br></a>
+            <a href="{% url 'Perfil' %}" class="d-block">Alex Meneses <br>Andres Gonzales</br>Diego Alegandro Garcia</br></a>
           </div>
 
       </div>
@@ -227,7 +223,7 @@
           with font-awesome or any other icon font library -->
           <li class="nav-header">Modulos</li>
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="{% url 'inicio' %}" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Inicio
@@ -236,7 +232,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="perfil.html" class="nav-link">
+            <a href="{% url 'Perfil' %}" class="nav-link">
               <i class="nav-icon far fa-user"></i>
               <p>
                 Perfil
@@ -245,7 +241,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="Contactos.html" class="nav-link">
+            <a href="{% url 'Contactos' %}" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Contactos
@@ -253,7 +249,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Chat.html" class="nav-link">
+            <a href="{% url 'Chat' %}" class="nav-link">
               <i class="nav-icon far fa-comments"></i>
               <p>
                 Chat
@@ -263,7 +259,7 @@
 
 
           <li class="nav-item">
-            <a href="Notificacion.html" class="nav-link">
+            <a href="{% url 'Notificaciones' %}" class="nav-link">
               <i class="nav-icon far fa-bell"></i>
               <p>
                 Notificaciones
@@ -281,26 +277,26 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="categoria.html" class="nav-link">
+                <a href="{% url 'Categoria' %}" class="nav-link">
                   <i class="nav-icon fas fa-circle-notch"></i>
                   <p>Categorias</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="productos.html" class="nav-link">
+                <a href="{% url 'Alerta' %}" class="nav-link">
                   <i class="nav-icon fas fa-circle-notch"></i>
-                  <p>Productos</p>
+                  <p>Alertas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="ventas.html" class="nav-link">
+                <a href="{% url 'Ventas' %}" class="nav-link">
                   <i class="nav-icon fas fa-circle-notch"></i>
                   <p>Ventas</p>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a href="Promociones.html" class="nav-link">
+                <a href="{% url 'Promociones' %}" class="nav-link">
                   <i class="nav-icon fas fa-circle-notch"></i>
                   <p>Promociones</p>
                 </a>
@@ -321,7 +317,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="iniciar_sesion.html" class="nav-link">
+          <a href="{% url 'Logout' %}" class="nav-link">
             <i class="nav-icon fas fa-address-card"></i>
             <p>
               Iniciar sesión

@@ -15,10 +15,10 @@ def Azucar(request):
     return render(request, 'Azucares.html')
 
 def Chat(request):
-    return render(request, 'Chat.html')
+    return render(request, '../Chat/templates/Chat/Chat.html')
 
 def Contacto(request):
-    return render(request, 'Contactos.html')
+    return render(request, '../Contactos/templates/Contactos/Contactos.html')
 
 def EditarPerfil(request):
     return render(request, 'editarPerfil.html')
@@ -36,28 +36,28 @@ def Lacteos(request):
     return render(request, 'Lacteos.html')
 
 def Notificaciones(request):
-    return render(request, 'Notificacion.html')
+    return render(request, '../Notificaciones/templates/Notificaciones/Notificacion.html')
 
 def Olvide_contraseña(request):
     return render(request, 'Olvide-contraseña.html')
 
 def  Perfil(request):
-    return render(request, 'perfil.html')
+    return render(request, '../Perfil/templates/Perfil/perfil.html')
 
 def Productos(request):
-    return render(request, 'productos.html')
+    return render(request, '../Alerta/templates/Alerta/productos.html')
 
 def Promociones(request):
-    return render(request, 'Promociones.html')
+    return render(request, '../Promociones/templates/Promociones/Promociones.html')
 
 def Refrescos(request):
     return render(request, 'Refrescos.html')
 
 def Venta(request):
-    return render(request, 'ventas.html')
+    return render(request, '../Ventas/templates/Ventas/ventas.html')
 
 def Categorias(request):
-    return render(request, 'categoria.html')
+    return render(request, '../Categorias/templates/Categoria/categoria.html')
 
 def Registro(request):
     return render(request, 'Registro.html')

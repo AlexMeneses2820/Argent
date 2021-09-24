@@ -1,0 +1,140 @@
+{% load static %}
+{% include 'header.html' %}
+
+    <!-- contenido -->
+    <div class="content-wrapper">
+            <!--cartas cabezera-->
+      <div class="content-header">
+        <div class="container-fluid" ">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0"><strong><i>Contactos</i></strong></h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item" ><a href="{% url 'inicio' %}"><strong><i>inicio</i></strong></a></li>
+                <li class="breadcrumb-item active"><i>DE L'ARGENT </i></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Contentenido -->
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"><i><strong>Amigos</strong></i></h3>
+
+        <div class="card-tools">
+          <span class="badge badge-danger">9 Miembros</span>
+          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+            <i class="fas fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-tool" data-card-widget="remove">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body p-0">
+        <ul class="users-list clearfix">
+          <li style='width: 120px; height: 50%'>
+            <img src="{% static 'img/Usuarios principales/Maria.jpeg' %}" alt="User Image">
+            <a class="users-list-name" href="#">Maria Isabel P.</a>
+            <span class="users-list-date">Hoy</span>
+          </li>
+          <li style='width: 120px; height: 50%' '>
+            <img src="{% static 'img/Usuarios principales/Auron.jpeg' %}" alt="User Image">
+            <a class="users-list-name" href="#">Raúl Álvarez Genes	</a>
+            <span class="users-list-date">Hoy</span>
+          </li>
+          <li style='width: 120px; height: 50%'>
+            <img src="{% static 'img/Usuarios principales/Melissa.jpeg' %}" alt="User Image">
+            <a class="users-list-name" href="#">Melissa Yapura</a>
+            <span class="users-list-date">Hoy</span>
+          </li>
+          <li style='width: 120px; height: 50%'>
+            <img src="{% static 'img/Usuarios principales/Deiner.jpeg' %}" alt="User Image">
+            <a class="users-list-name" href="#">Deiner Andres</a>
+            <span class="users-list-date">Ayer</span>
+          </li>
+          <li style='width: 120px; height: 50%'>
+            <img src="{% static 'img/Usuarios principales/Edgar Granados.jpeg' %}" alt="User Image">
+            <a class="users-list-name" href="#">Edgar Granados</a>
+            <span class="users-list-date">Ayer</span>
+          </li>
+          <li style='width: 120px; height: 50%'>
+            <img src="{% static 'img/Usuarios principales/Jazmine.jpeg' %}" alt="User Image">
+            <a class="users-list-name" href="#">Jaz Herrera Catalano</a>
+            <span class="users-list-date">Hoy</span>
+          </li>
+          <li style='width: 120px; height: 50%'>
+            <img src="{% static 'img/Usuarios principales/Gina.jpeg' %}" alt="User Image">
+            <a class="users-list-name" href="#">Gina Villa</a>
+            <span class="users-list-date">Hoy</span>
+          </li>
+          <li style='width: 120px; height: 50%'>
+            <img src="{% static 'img/Usuarios principales/Juan Manuel.jpeg' %} " alt="User Image">
+            <a class="users-list-name" href="#">Juan Manuel Barranco Padilla</a>
+            <span class="users-list-date">16 Jun</span>
+          </li>
+          <li style='width: 120px; height: 50%'>
+            <img src="{% static 'img/Usuarios principales/Manuelita.jpeg' %}" alt="User Image">
+            <a class="users-list-name" href="#">Manuela Pineda</a>
+            <span class="users-list-date">Hoy</span>
+          </li>
+          
+        </ul>
+        <!-- /.users-list -->
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer text-center">
+        <a href="javascript:">Ver todos los contactos</a>
+      </div>
+      <!-- /.card-footer -->
+    </div>
+
+    <!--FOTOS-->
+    <h5 class="mb-2">Notificaciones</h5>
+    <div class="card card-success">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12 col-lg-6 col-xl-4">
+            <div class="card mb-2 bg-gradient-dark">
+              <img class="card-img-top" src="{% static 'img/Paisajes/Positano.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <h5 class="card-title text-primary text-white"><strong>Positano</strong></h5>
+                <p class="card-text text-black pb-2 pt-1">Positano es quizás el pueblo más conocido y uno de los más bellos de la Costa Amalfitana, zona declarada Patrimonio de la Humanidad.</p>
+                <a href="{% url 'Notificaciones' %}" class="text-white">Última actualización hace 2 minutos</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6 col-xl-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="{% static 'img/Paisajes/Barcelona.jpg' %}" alt="Dist Photo 2" style="height: 263PX;">
+              <div class="card-img-overlay d-flex flex-column justify-content-center">
+                <h5 class="card-title text-white mt-5 pt-2">Barcelona </h5>
+                <p class="card-text pb-2 pt-1 text-white">
+                  Es la ciudad perfecta tanto para los amantes de la playa como para los amantes de la montaña. ¡Ni siquiera tendrás que elegir, lo tienes todo! Esto se debe a que Barcelona se encuentra a orillas del mar Mediterráneo y está a la vez rodeada de montañas.
+                </p>
+                <a href="{% url 'Notificaciones' %}" class="text-white">Última actualización hace 15 Horas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6 col-xl-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="{% static 'img/Paisajes/Noruega.jpeg' %}" alt="Dist Photo 3" style="height: 263PX;">
+              <div class="card-img-overlay">
+                <h5 class="card-title text-primary">Noruega</h5>
+                <p class="card-text pb-1 pt-1 text-white">
+                  Noruega es un gran destino turistico, ya que esta es unica por sus inmensos y bastos paisajes que enamoran y fasinan a quien los observa. </p>
+                <a href="{% url 'Notificaciones' %}" class="text-primary">Última actualización hace 21 Horas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    
+{% include 'footer.html' %}

@@ -1,0 +1,80 @@
+{% load static %}
+{% include 'header.html' %}
+
+    <!-- Contentenido -->
+<div class="content-wrapper">
+            <!--cartas cabezera-->
+      <div class="content-header">
+        <div class="container-fluid" ">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+                <h3 class="card-title"><strong><i>categoria de productos</i></strong></h3>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2 bg-gradient-dark">
+                      <img class="card-img-top" src="{% static 'img/categoria/lacteos.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
+                      <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <a href="../../../../templates/Lacteos.html" class="text-blue"><strong>Lacteos</strong></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="{% static 'img/categoria/grano.webp' %}" alt="Dist Photo 2" style="height: 263PX;">
+                      <div class="card-img-overlay d-flex flex-column justify-content-center">
+                        <a href="../../../../templates/Granos.html" class="text-blue"><strong>Granos</strong></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="{% static 'img/categoria/refresco.webp' %}" alt="Dist Photo 3" style="height: 263PX;">
+                      <div class="card-img-overlay">
+                        <a href="../../../../templates/Refrescos.html" class="text-blue"><strong>Refrescos</strong></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="row">
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2 bg-gradient-dark">
+                      <img class="card-img-top" src="{% static 'img/categoria/azucares.webp' %}" alt="Dist Photo 1" style="height: 263PX;">
+                      <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <a href="../../../../templates/Azucares.html" class="text-blue"><strong>Azucares</strong></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="{% static 'img/categoria/carne.webp' %}" alt="Dist Photo 2" style="height: 263PX;">
+                      <div class="card-img-overlay d-flex flex-column justify-content-center">
+                        <a href="../../../../templates/Carnes.html" class="text-blue"><strong>Carnes</strong></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="{% static 'img/categoria/frutas y verduras.webp' %} " alt="Dist Photo 3" style="height: 263PX;">
+                      <div class="card-img-overlay">
+                        <a href="../../../../templates/Frutas_y_verduras.html" class="text-blue"><strong>Frutas y Verduras</strong></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+              </div>
+              <!-- /.card-footer-->
+              
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </div>
+
+{% include 'footer.html' %}
