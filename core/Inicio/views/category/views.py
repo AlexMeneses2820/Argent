@@ -12,7 +12,7 @@ from core.Inicio.models import Empleados,Cargos
 def categoriry_list(request):
     data={
         'title': 'Personas dirijidas',
-        'Empleados':Empleados.objects.all()
+        'Empleados': Empleados.objects.all()
     }
     return render(request, 'category/list.html', data)
 
@@ -96,7 +96,6 @@ class CategoryDeleteView(DeleteView):
     model = Empleados
     template_name = 'category/delete.html'
     success_url = reverse_lazy('inicio')
-
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

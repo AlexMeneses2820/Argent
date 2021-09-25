@@ -17,7 +17,7 @@ class CategoryForm(ModelForm):
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Ingrese un nombre',
-                    'autocomplate':'off'
+                    'autocomplete':'off'
                 }
             ),
         },
@@ -34,7 +34,7 @@ class CargosForm(ModelForm):
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Ingrese un Nuevo Cargo',
-                    'autocomplate':'off'
+                    'autocomplete':'off'
                 }
             ),
         },
