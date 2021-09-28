@@ -12,10 +12,14 @@
                         <tbody>
                            {% for e in object_list %}
                          <tr>
-                             <td>{{ e.image }}</td>
+                             <td class="text-center">
+                                 <img src="/media/{{ e.image }}" class="img-fluid d-block mx-auto" style="width: 20px; height: 20px">
+                             </td>
                               <td>{{ e.Nombre }}</td>
                              <td><a href="{% url 'Editar2' e.id %}" class="btn btn-primary btn-xs"><i class="fas fa-edit"></i></a>
                                  <a href="{% url 'Delete_categoria' e.id %}" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i></a>
+
+
                              </td>
                          </tr>
                         {% endfor %}

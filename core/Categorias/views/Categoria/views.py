@@ -43,6 +43,9 @@ class CategoriaCreateView(CreateView):
         context['title']= 'Añadir Categoria'
         return context
 
+
+
+
 class CategoriaUpdateView(UpdateView):
     model = Categorias
     form_class = CategoriaForm

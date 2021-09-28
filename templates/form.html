@@ -2,7 +2,7 @@
 
 {% block content %}
 {% load widget_tweaks %}
-<form method="post" action=".">
+<form method="post" action="." enctype="multipart/form-data">
 
     <div class="card card-info">
             <div class="content-wrapper">
@@ -40,7 +40,9 @@
                         Guardar registro
                     </button>
                         </div>
-</form>    <script>
+
+ </form>
+    <script>
         {% if form.errors %}
             var errors = '';
             {% for field in form %}
