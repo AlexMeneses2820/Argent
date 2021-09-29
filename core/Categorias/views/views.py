@@ -9,15 +9,8 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from core.Categorias.forms import CategoriaForm
 from core.Categorias.models import Categorias
 
-
-def Categoria_list(request):
-    datos={
-        'Categoria': Categorias.objects.all()
-    }
-    return render(datos,'Categoria/lista.html',request)
-
 class CategoriaListview(ListView):
-    template_name = 'Categoria/categoria.html'
+    template_name = 'categoria.html'
     model = Categorias
     sucess_url = reverse_lazy('Categoria')
 
@@ -35,7 +28,7 @@ class CategoriaListview(ListView):
 class CategoriaCreateView(CreateView):
     model = Categorias
     form_class = CategoriaForm
-    template_name = 'Categoria/Create.html'
+    template_name = 'Create.html'
     success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):
@@ -49,7 +42,7 @@ class CategoriaCreateView(CreateView):
 class CategoriaUpdateView(UpdateView):
     model = Categorias
     form_class = CategoriaForm
-    template_name = 'Categoria/Create.html'
+    template_name = 'Create.html'
     success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):
@@ -60,7 +53,7 @@ class CategoriaUpdateView(UpdateView):
 
 class CategoriaDeleteView(DeleteView):
     model = Categorias
-    template_name = 'Categoria/delete.html'
+    template_name = 'delete.html'
     success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):
