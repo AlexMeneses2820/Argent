@@ -196,10 +196,10 @@
         <!-- Personas creadoras y nombre de proyecto -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="{% static 'img/Foto de perfil.svg' %}" class="img-circle elevation-2" alt="User Image">
+            <img src="{{ request.user.get_image}}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="{% url 'Perfil' %}" class="d-block">Alex Meneses <br>Andres Gonzales</br>Diego Alegandro Garcia</br></a>
+            <a href="{% url 'Perfil' %}" class="d-block">Alex Meneses <br>Andres Gonzales</br>Diego Alejandro Garcia</br></a>
           </div>
 
       </div>
