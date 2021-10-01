@@ -5,16 +5,17 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import *
-from core.Perfil.models import Perfil
+from core.Perfil.models import PerfilModel
 
 
 class PerfilListview(ListView):
     template_name = 'Perfil/perfil.html'
-    model = Perfil
+    model = PerfilModel
     sucess_url = reverse_lazy('Perfil')
 
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
+        self.object = self
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):

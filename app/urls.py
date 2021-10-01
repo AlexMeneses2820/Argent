@@ -38,6 +38,7 @@ urlpatterns = [
     path('', include('core.Promociones.urls')),
     path('', include('core.Ventas.urls')),
     path('', include('core.login.urls')),
+    path('', include('core.user.urls')),
 
     path('Bienvenida/', Bienvenida),
     path('cambiarcontraseña/', cambiarcontraseña),

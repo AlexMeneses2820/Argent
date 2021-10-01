@@ -19,46 +19,42 @@
     <body class="login-page" style="min-height: 466px;background: url({% static 'img/Paisajes/Fondo.jpg' %})">
 
         <div class="login-box">
+- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Regístrese para iniciar su sesión </p>
 
-          <!-- /.login-logo -->
-          <div class="card card-outline card-primary">
-            <div class="card-header text-center">
-            <strong><i>DE L'ARGENT</i></strong></a> <img src="{% static 'img/Icono principal.svg' %}" alt="">
+                <form action="." method="post">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        {{ form.username | add_class:'form-control' | attr:'autocomplete:off' | attr:'placeholder:Ingrese su usuario' }}
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        {{ form.password | add_class:'form-control' | attr:'autocomplete:off'| attr:'placeholder:Ingrese su contraseña' }}
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- /.col -->
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+                        </div>
+                </form>
+                <p class="mb-0">
+                    <a href="{% url 'registro' %}" class="text-center">Registrarse</a>
+                </p>
             </div>
-            <div class="card-body">
-              <p class="login-box-msg">{{ title }}</p>
-
-            <form action="." method="post">
-                <input type="hidden" name="next" value="{{ next }}">
-                {% csrf_token %}
-                <div class="input-group mb-3">
-                    {{ form.username|add_class:'form-control'|attr:'autocomplete:off'|attr:'placeholder:Ingrese su username' }}
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    {{ form.password|add_class:'form-control'|attr:'autocomplete:off'|attr:'placeholder:Ingrese su password' }}
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <i class="fas fa-unlock-alt"></i>
-                        </div>
-                    </div>
-                </div>
-                 <div class="row">
-                    <div class="col-lg-12">
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fas fa-sign-in-alt"></i> Iniciar sesión
-                        </button>
-                    </div>
-                </div>
-                  <!-- /.col -->
-                </div>
-              </form>
-          </div>
+            <!-- /.login-card-body -->
         </div>
+    </div>
             <script type="application/javascript">
         {% if form.errors %}
             var errors = '';

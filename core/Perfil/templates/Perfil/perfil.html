@@ -1,107 +1,107 @@
+{% extends 'body.html' %}
 {% load static %}
-{% include 'header.html' %}
-
-    <!-- contenido -->
+{% block content %}
     <div class="content-wrapper">
-        <!--cartas cabezera-->
-  <div class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1 class="m-0"><strong><i> Perfil</i></strong></h1>
-        </div><!-- /.col -->
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{% url 'inicio' %}"><strong><i>inicio</i></strong></a></li>
-            <li class="breadcrumb-item active"><i>DE L'ARGENT </i></li>
-          </ol>
+        <div class="content-header">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Perfil</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Usuario</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'Perfil' %}">Perfil</a></li>
+                        </ol>
+
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
         </div>
-      </div>
-    </div>
-  </div>
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
+        <!-- Aqui va toda la info del main -->
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- Profile Image -->
+                        <div class="card card-dark card-outline">
+                            <div class="card-body box-profile">
+                                <div class="text-center">
+                                    <a href="#" >
+                                        <img class="profile-user-img img-fluid img-circle"
+                                             src="{{ request.user.get_image }}"
+                                             alt="User profile picture">
+                                    </a>
 
-          <!-- parte del perfil -->
-          <div class="card card-primary card-outline">
-            <div class="card-body box-profile">
-              <div class="text-center">
-                <img class="profile-user-img img-fluid img-circle" src="{% static 'img/Foto de perfil.svg' %}" alt="User profile picture">
-              </div>
+                                </div>
 
-              <h3 class="profile-username text-center">Alex Meneses 
-                <br>Andres Gonzales
-              </h3>
-            </div>
-            <!-- /.card-body -->
-          </div>
+                                <h3 class="profile-username text-center">{{ request.user.get_full_name }}</h3>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="settings">
+                                        <form class="form-horizontal">
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputName"
+                                                           value="{{ request.user.get_full_name }}" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="inputEmail"
+                                                           value="{{ request.user.email }}" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputAge" class="col-sm-2 col-form-label">Usuario</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputAge"
+                                                           value="{{ request.user.username }}" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputAge" class="col-sm-2 col-form-label">Creación de
+                                                    usuario</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputAge"
+                                                           value="{{ request.user.date_joined }}" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputAge" class="col-sm-2 col-form-label">Contraseña</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="form-control" id="inputAge"
+                                                           value="{{ request.user.password }}" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="offset-sm-2 col-sm-10">
+                                                    <a href="{% url 'User_edit' %}" class="btn btn-primary"><i
+                                                            class="fas fa-user-edit"></i>Editar
+                                                        usuario</a>
 
-          <!-- sobre nosotros -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-9">
-          <div class="card">
-            <div class="card-header p-2"><!-- cabezera -->
-              <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Ajustes</a></li>
-              </ul>
-            </div>
-            <div class="card-body">
-                      <!-- Contenido de ajustes -->
-                <div class="tab-pane" id="settings">
-                  <form class="form-horizontal">
-                    <div class="form-group row">
-                      <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
-                      <div class="col-sm-10">
-                        <input type="name" class="form-control" id="inputName" placeholder="Name">
-                      </div>
+                                        </form>
+                                    </div>
+                                    <!-- /.tab-pane -->
+                                </div>
+                                <!-- /.tab-content -->
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
                     </div>
-                    <div class="form-group row">
-                      <label for="inputName2" class="col-sm-2 col-form-label">Apellido</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputName2" placeholder="Apellido">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputEmail" class="col-sm-2 col-form-label">Correo electronico</label>
-                      <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Correo electronico">
-                      </div>
-                    </div>
-
-                    <div class="form-group row">
-                      <label for="inputExperience" class="col-sm-2 col-form-label">Experiencia</label>
-                      <div class="col-sm-10">
-                        <textarea class="form-control" id="inputExperience" placeholder="Experiencia"></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputSkills" class="col-sm-2 col-form-label">Habilidades</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputSkills" placeholder="Habilidades">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="offset-sm-2 col-sm-10">
-                        <button type="submit" class="btn btn-danger">Enviar</button>
-                      </div>
-                    </div>
-                  </form>
                 </div>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
     </div>
-  </section>
-</div>
-    
-{% include 'footer.html' %}
+{% endblock %}

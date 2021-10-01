@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def Bienvenida(request):
-    return render(request, 'Bienvenida.html')
+    return render(request, 'login/Bienvenida.html')
 
 def cambiarcontraseña(request):
     return render(request, 'category/Cargos.html')

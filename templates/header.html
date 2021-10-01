@@ -19,6 +19,9 @@
     <script src="{% static 'lib/jquery-confirm-v3.3.4/jquery-confirm.min.js' %}"></script>
     <!-- Funciones -->
     <script src="{% static 'js/functions.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'lib/functions.js' %}"></script>
+    <script src="{% static 'js/functions.js' %}"></script>
 
 </head>
 </head>
@@ -184,7 +187,7 @@
             <img src="{{ request.user.get_image}}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="{% url 'Perfil' %}" class="d-block">Alex Meneses <br>Andres Gonzales</br>Diego Alejandro Garcia</br></a>
+            <a href="{% url 'Perfil' %}" class="d-block">{{ request.user.username }}</a>
           </div>
 
       </div>

@@ -1,0 +1,109 @@
+{% extends 'form.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+    <div class="content-wrapper">
+        {% block form %}
+            <div class="content-header">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">{{ title }}</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="{% url 'Perfil' %}">Perfil</a></li>
+
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+        {% endblock %}
+        <!-- Aqui va toda la info del main -->
+        <section class="content">
+            <div class="container">
+                <form method="post" action="." enctype="multipart/form-data">
+                    <div class="card card-outline card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">{{ title }}</h3>
+                        </div>
+                        <div class="card-body">
+                            {% csrf_token %}
+                            <input type="hidden" name="action" value="{{ action }}">
+                            {% for field in form.visible_fields %}
+                                <label>{{ field.label }}</label>
+                                <div class="input-group mb-3">
+                                    {{ field | add_class:'form-control' }}
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            {% if field.label == 'Nombre de usuario' %}
+                                                <i class="fas fa-user"></i>
+                                            {% elif field.label == 'Nombre' or field.label == 'Apellidos' %}
+                                                <i class="fas fa-user-circle"></i>
+                                            {% elif field.label == 'Dirección de correo electrónico' %}
+                                                <i class="fas fa-envelope"></i>
+                                            {% elif field.label == 'Contraseña' or field.label == 'Contraseña (confirmación)' %}
+                                                <i class="fas fa-lock"></i>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="card-footer">
+                            <button id="submit" type="submit" class="btn btn-primary btnTest"><i
+                                    class="fas fa-save"></i>
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        </div>
+        <script>
+            {% if form.errors %}
+                let errors = '';
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        errors += '{{ error }}\n'
+                    {% endfor %}
+                {% endfor %}
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops... Error!',
+                    text: errors,
+                })
+            {% endif %}
+            $('form').on('submit', function (e) {
+                e.preventDefault();
+                var parameters = new FormData(this);
+
+                $.ajax({
+                    url: window.location.pathname,
+                    type: 'POST',
+                    data: parameters,
+                    dataType: 'json',
+                    processData: false,
+                    contentType: false,
+                }).done(function (data) {
+                    console.log(data);
+                    if (!data.hasOwnProperty('error')) {
+                        location.href = '{{ list_url }}';
+                        return false;
+                    }
+                    message_error(data.error);
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+                    alert(textStatus + ': ' + errorThrown);
+                }).always(function (data) {
+
+                });
+
+            });
+
+        </script>
+
+
+{% endblock %}
