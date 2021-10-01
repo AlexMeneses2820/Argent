@@ -13,7 +13,7 @@
                            {% for e in object_list %}
                          <tr>
                              <td class="text-center">
-                                 <img src="{{ e.get_image }}" class="img-fluid d-block mx-auto" style="width: 60px; height: 60px; float: left">
+                                 <img src="{{ e.get_image }}" class="direct-chat-img" style="width: 60px; height: 60px; float: left">
                              </td>
                               <td>{{ e.Nombre }}</td>
                              <td><a href="{% url 'Editar2' e.id %}" class="btn btn-primary btn-xs"><i class="fas fa-edit"></i></a>

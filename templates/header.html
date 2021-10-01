@@ -49,21 +49,9 @@
             <li class="nav-item d-none d-sm-inline-block">
               <a href="{% url 'inicio' %}" class="nav-link">Inicio</a>
             </li>
-            <li class="nav-item d-none d-sm-inline-block">
-              <a href="{% url 'Contactos' %}" class="nav-link">Contactos</a>
-            </li>
+
           </ul>
           <!-- SEARCH FORM -->
-          <form class="form-inline ml-0 ml-md-3">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Buscar" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
-          </form>
         </div>
 
         <!-- Right navbar links -->
@@ -153,26 +141,23 @@
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
             <div class="dropdown-divider"></div>
-            <a href="{% url 'Notificaciones' %}" class="dropdown-item">
+            <a href="{% url 'Alerta' %}" class="dropdown-item">
               <i class="fas fa-envelope mr-2"></i> 4 nuevos mensajes
 
             </a>
             <div class="dropdown-divider"></div>
-            <a href="{% url 'Notificaciones' %}" class="dropdown-item">
+            <a href="{% url 'Alerta' %}" class="dropdown-item">
               <i class="fas fa-users mr-2"></i> 8 recomendaciones
             </a>
             <div class="dropdown-divider"></div>
-            <a href="{% url 'Notificaciones' %}" class="dropdown-item">
+            <a href="{% url 'Alerta' %}" class="dropdown-item">
               <i class="fas fa-file mr-2"></i> 3 reportes
             </a>
             <div class="dropdown-divider"></div>
-            <a href="{% url 'Notificaciones' %}" class="dropdown-item dropdown-footer">Ver todas las notificaciones</a>
+            <a href="{% url 'Alerta' %}" class="dropdown-item dropdown-footer">Ver todas las notificaciones</a>
           </div>
         </li>
                         <li class="nav-item">
-                <a class="nav-link" href="{% url 'Logout' %}">
-                    <i class="fas fa-sign-out-alt"></i>
-                </a>
             </li>
       </ul>
 
@@ -240,14 +225,7 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="{% url 'Contactos' %}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Contactos
-              </p>
-            </a>
-          </li>
+
           <li class="nav-item">
             <a href="{% url 'Chat' %}" class="nav-link">
               <i class="nav-icon far fa-comments"></i>
@@ -257,79 +235,39 @@
             </a>
           </li>
 
-
-          <li class="nav-item">
-            <a href="{% url 'Notificaciones' %}" class="nav-link">
-              <i class="nav-icon far fa-bell"></i>
-              <p>
-                Notificaciones
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-align-left"></i>
-              <p>
-                Opciones
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
+             <li class="nav-item">
                 <a href="{% url 'Categoria' %}" class="nav-link">
-                  <i class="nav-icon fas fa-circle-notch"></i>
+                  <i class="fas fa-braille"></i>
                   <p>Categorias</p>
                 </a>
               </li>
+
               <li class="nav-item">
                 <a href="{% url 'Alerta' %}" class="nav-link">
-                  <i class="nav-icon fas fa-circle-notch"></i>
+                  <i class="fas fa-exclamation-triangle"></i>
                   <p>Alertas</p>
                 </a>
               </li>
+
               <li class="nav-item">
                 <a href="{% url 'Ventas' %}" class="nav-link">
-                  <i class="nav-icon fas fa-circle-notch"></i>
+                  <i class="fas fa-money-check-alt"></i>
                   <p>Ventas</p>
                 </a>
               </li>
 
               <li class="nav-item">
                 <a href="{% url 'Promociones' %}" class="nav-link">
-                  <i class="nav-icon fas fa-circle-notch"></i>
-                  <p>Promociones</p>
+                  <i class="fas fa-tags"></i>
+                    <p>Promociones</p>
                 </a>
               </li>
-            </ul>
-          </li>
-        <li class="nav-header">Configuración</li>
-
-
-
-        <li class="nav-item">
-          <a href="editarPerfil.html" class="nav-link">
-            <i class="nav-icon fas fa-user-circle"></i>
-            <p>
-              Editar perfil
-            </p>
-          </a>
-        </li>
 
         <li class="nav-item">
           <a href="{% url 'Logout' %}" class="nav-link">
-            <i class="nav-icon fas fa-address-card"></i>
+            <i class="fas fa-door-open"></i>
             <p>
-              Iniciar sesión
-            </p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="Registro.html" class="nav-link">
-            <i class="nav-icon fas fa-key "></i>
-            <p>
-              Registro
+             Salir
             </p>
           </a>
         </li>

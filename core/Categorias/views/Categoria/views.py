@@ -10,7 +10,7 @@ from core.Categorias.forms import CategoriaForm
 from core.Categorias.models import Categorias
 
 class CategoriaListview(ListView):
-    template_name = 'categoria.html'
+    template_name = 'Categoria/categoria.html'
     model = Categorias
     sucess_url = reverse_lazy('Categoria')
 
@@ -28,7 +28,7 @@ class CategoriaListview(ListView):
 class CategoriaCreateView(CreateView):
     model = Categorias
     form_class = CategoriaForm
-    template_name = 'Create.html'
+    template_name = 'Categoria/Create.html'
     success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):
@@ -36,13 +36,10 @@ class CategoriaCreateView(CreateView):
         context['title']= 'Añadir Categoria'
         return context
 
-
-
-
 class CategoriaUpdateView(UpdateView):
     model = Categorias
     form_class = CategoriaForm
-    template_name = 'Create.html'
+    template_name = 'Categoria/Create.html'
     success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):
@@ -53,7 +50,7 @@ class CategoriaUpdateView(UpdateView):
 
 class CategoriaDeleteView(DeleteView):
     model = Categorias
-    template_name = 'delete.html'
+    template_name = 'Categoria/delete.html'
     success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):

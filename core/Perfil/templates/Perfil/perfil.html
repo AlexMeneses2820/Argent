@@ -34,211 +34,21 @@
               <h3 class="profile-username text-center">Alex Meneses 
                 <br>Andres Gonzales
               </h3>
-
-              <p class="text-muted text-center">Desarolladores de Software</p>
             </div>
             <!-- /.card-body -->
           </div>
 
           <!-- sobre nosotros -->
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">Sobre nosotros</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-              <strong><i class="fas fa-book mr-1"></i> Educación</strong>
-
-              <p class="text-muted">
-                Harvard University y Cambridge University (Contabilidad y idiomas)
-                <br>
-                SENA: Servicio Nacional de Aprendizaje (Programación)
-              </p>
-
-              <hr>
-
-              <strong><i class="fas fa-map-marker-alt mr-1"></i> Locación</strong>
-
-              <p class="text-muted">Medellin, Colombia</p>
-
-              <hr>
-
-              <strong><i class="fas fa-pencil-alt mr-1"></i> Habilidades</strong>
-
-              <p class="text-muted">
-                <span class="tag tag-danger">Diseño de interfaz de usuario,</span>
-                <span class="tag tag-success">Codificación,</span>
-                <span class="tag tag-info">Javascript,</span>
-                <span class="tag tag-warning">PHP,</span>
-                <span class="tag tag-primary">Python</span>
-              </p>
-
-              <hr>
-
-              <strong><i class="far fa-file-alt mr-1"></i> Notas</strong>
-              <p class="text-muted" ><i>Contamos con experiencia y los conocimientos tecnicos necesarios para desarrollar actividades en el curso del software, ademas, contamos con el nivel de ingles avanzado para una modificación futura para el beneficio y comodidad de nuestros clientes</i></p>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
         </div>
         <!-- /.col -->
         <div class="col-md-9">
           <div class="card">
             <div class="card-header p-2"><!-- cabezera -->
               <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Notificaciones</a></li>
                 <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Ajustes</a></li>
               </ul>
             </div>
             <div class="card-body">
-              <div class="tab-content">
-                <!-- Notificación -->
-                <div class="tab-pane" id="timeline">
-                  <!-- The timeline -->
-                  <div class="timeline timeline-inverse">
-                    <!-- tiempo 1 -->
-                    <div class="time-label">
-                      <span class="bg-danger">
-                         Hoy, 17 Jun. 2021
-                      </span>
-                    </div>
-                    <div>
-                      <i class="fas fa-envelope bg-primary"></i>
-                      <div class="timeline-item">
-                        <span class="time"><i class="far fa-clock"></i> 1:05</span>
-                        <h3 class="timeline-header"><a href="#">Soporte tecnico</a> Envio un mensaje</h3>
-                        <div class="timeline-body">
-                          Lamento que tengas este inconveniente con tu correo, pero juntos lograremos resolverlo. <br>
-                          Te comento que ese correo es totalmente falso, se trata de una tecnica usada por cyber criminales, para tratar de robar los datos de tu correo, por lo que te recomiendo bloquear al remitente.
-                        </div>
-                        <div class="timeline-footer">
-                          <a href="{% url 'Notificaciones' %}" class="btn btn-warning btn-flat btn-sm">Ver comentario</a>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Aceptación de amistad Gina-->
-                    <div>
-                      <i class="fas fa-user bg-info"></i>
-                      <div class="timeline-item">
-                        <span class="time"><i class="far fa-clock"></i> Hace 5 minutos</span>
-                        <h3 class="timeline-header border-0"><a href="#">Gina Villa</a> Aceptó tu solicitud de amistad
-                        </h3>
-                        <div class="timeline-footer">
-                        <a href="#" class="btn btn-warning btn-flat btn-sm">Ver</a>
-                      </div>
-                      </div>
-                      
-                    </div>
-
-                    <div>
-                      <i class="fas fa-comments bg-warning"></i>
-                      <!-- Comentario de deiner -->
-                      <div class="timeline-item">
-                        <span class="time"><i class="far fa-clock"></i> Hace 27 minutos</span>
-
-                        <h3 class="timeline-header"><a href="#">Deiner Andres</a> Comento tu publicación</h3>
-
-                        <div class="timeline-body">
-                          <strong>Fraces para recordar</strong> <br>
-                          “Cuando todo parece estar en tu contra, recuerda que un avión despega contra el viento, no con él”. <br>
-                          “Un actor debe ser capaz de meterse en la piel de otras personas y eso me resulta difícil. Prefiero interpretarme a mí mismo: un piloto de carreras. Es lo que soy”. <br>
-                          <i>Amour pour l'aviation</i>
-                        </div>
-                        <div class="timeline-footer">
-                          <a href="{% url 'Chat' %}" class="btn btn-warning btn-flat btn-sm">Ver mensaje</a>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 2do tiempo -->
-                    <div class="time-label">
-                      <span class="bg-success">
-                        16 Abr. 2021
-                      </span>
-                    </div>
-                    <!-- Fotos de Edgar-->
-                    <div>
-                      <i class="fas fa-camera bg-purple"></i>
-
-                      <div class="timeline-item">
-                        <span class="time"><i class="far fa-clock"></i> hace 2 meses</span>
-
-                        <h3 class="timeline-header"><a href="#">Edgar Granados</a> Subio nuevas fotos</h3>
-                      <!-- Imagen mayor -->
-                    <div class="row mb-3">
-                      <div class="col-sm-6">
-                        <!-- Imagenes menores izquierda -->
-                        <img class="img-fluid" src="{% static 'img/Fotos Edgar/Analista 2.svg' %}" alt="Photo">
-                      </div>
-                          <!-- Imagenes menores derecha -->
-                          <div class="col-sm-6">
-                            <div class="row">
-                          <div class="col-sm-6">
-                            <img class="img-fluid mb-3" src="{% static 'img/Fotos Edgar/Analista 4.svg' %}" alt="Photo">
-                          </div>
-                          <!-- /.col -->
-                        </div>
-                        <!-- /.row -->
-                      </div>
-                      <div class="timeline-footer">
-                        <a href="{% url 'Notificaciones' %}" class="btn btn-warning btn-flat btn-sm">Ver comentario</a>
-                      </div>
-                    </div>
-
-                    
-                      </div>
-                    </div>
-                    <div class="time-label">
-                      <span class="bg-danger">
-                        31 Mar. 2021
-                      </span>
-                    </div>
-                    <!-- Aceptación de amistad jaz -->
-                    <div>
-                      <i class="fas fa-user bg-info"></i>
-                      <div class="timeline-item">
-                        <span class="time"><i class="far fa-clock"></i> Hace 3 meses</span>
-                        <h3 class="timeline-header border-0"><a href="#">Jaz Herrera Catalano</a> Aceptó tu solicitud de amistad
-                        </h3>
-                        <div class="timeline-footer">
-                          <a href="#" class="btn btn-warning btn-flat btn-sm" >Ver</a>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    <div class="time-label">
-                      <span class="bg-success">
-                        5 Ene. 2021
-                      </span>
-                    </div>
-                    <div>
-                      <i class="fas fa-comments bg-warning"></i>
-                      <!-- Comentario de maria -->
-                      <div class="timeline-item">
-                        <span class="time"><i class="far fa-clock"></i> Hace 6 meses</span>
-
-                        <h3 class="timeline-header"><a href="#">Maria Isabel</a> Comento tu publicación</h3>
-
-                        <div class="timeline-body">
-                          <p><strong><i>Te deseo suerte con el programa, lo dejo en tus manos </i></strong></p>
-                          <img style="height: 160px ;" src="{% static 'img/Stikers/Stiker Cariño.png' %}" alt="#">
-                          <p><strong><i>Recuerden que son los mejores, Besitos :3</i></strong></p>
-                          <img style="height: 160px" src="{% static 'img/Stikers/Stiker Amor.png' %}" alt="">
-                        </div>
-                        <div class="timeline-footer">
-                          <a href="{% url 'Chat' %}" class="btn btn-warning btn-flat btn-sm">Ver mensaje</a>
-                        </div>
-                      </div>
-                    </div>
-
-
-
-
-                    <div>
-                      <i class="far fa-clock bg-gray"></i>
-                    </div>
-                  </div>
-                </div>
                       <!-- Contenido de ajustes -->
                 <div class="tab-pane" id="settings">
                   <form class="form-horizontal">
@@ -271,15 +81,6 @@
                       <label for="inputSkills" class="col-sm-2 col-form-label">Habilidades</label>
                       <div class="col-sm-10">
                         <input type="text" class="form-control" id="inputSkills" placeholder="Habilidades">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="offset-sm-2 col-sm-10">
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox"> Aceptó los <a href="#">Terminos y condiciones</a>
-                          </label>
-                        </div>
                       </div>
                     </div>
                     <div class="form-group row">
