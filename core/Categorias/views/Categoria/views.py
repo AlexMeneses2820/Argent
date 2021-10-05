@@ -66,11 +66,27 @@ class ProductoListview(ListView):
     template_name = 'Categoria/Productos.html'
     success_url = reverse_lazy('Categoria')
 
-    #def get_queryset(self):
+#@staticmethod
+#def get_products_by_id(ids):
+  #  return Producto2.objects.filter(id__in=ids)
 
-     #   user = self.request.user
+#@staticmethod
+#def get_all_products():
+ #   return Producto2.objects.all()
 
-      #  return super().get_queryset().filter(category_id = user)
+#@staticmethod
+#def get_all_products_by_categoryid(category_id):
+ #   if category_id:
+  #      return Producto2.objects.filter(category=category_id)
+   # else:
+    #    return Producto2.get_all_products();
+
+#    def get_queryset(self):
+#
+ #       Producto2 = self.request.Productos2
+#
+ #       return super().get_queryset().filter(category_id = Producto2)
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
