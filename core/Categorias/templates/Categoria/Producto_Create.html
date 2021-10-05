@@ -1,0 +1,71 @@
+{% extends 'body.html' %}
+
+{% block content %}
+{% load widget_tweaks %}
+<form method="post" action="." enctype="multipart/form-data">
+
+    <div class="card card-info">
+            <div class="content-wrapper">
+            <!--cartas cabezera-->
+                  <div class="content-header">
+                    <div class="container-fluid">
+                        <h3 class="card-title"><i class="fab fa-accessible-icon"></i> {{ title }}</h3>
+                      </div>
+                      <div class="card-body">
+                        <!-- Color Picker -->
+                          {% csrf_token %}
+
+
+                      {% if form.errors  %}
+
+                      <div class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h5><i class="icon fas fa-ban"></i> Hay un error</h5>
+                      <ul>
+                 {% for field in form %}
+                 {% for error in field.errors %}
+                 <li>{{ error }}</li>
+                 {% endfor %}
+                 {% endfor %}
+                 </ul>
+                </div>
+
+                      {% endif %}
+
+                          {% for field in form.visible_fields %}
+                          {{ field|add_class:'form-control' }}
+                          {% endfor %}
+                      </div>
+                    <button type="submit" class="b|tn btn-outline-success btn-flat"><i class="fab fa-autoprefixer"></i>
+                        Guardar registro
+                    </button>
+                        </div>
+
+ </form>
+    <script>
+        {% if form.errors %}
+            var errors = '';
+            {% for field in form %}
+                {% for error in field.errors %}
+                    errors += '{{ error }}\n';
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+                errors += '{{ error }}\n';
+            {% endfor %}
+            Swal.fire({
+                title: 'Error!',
+                text: errors,
+                icon: 'error'
+            });
+        {% endif %}
+
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            var parameters = $(this).serializeArray();
+            submit_with_ajax(window.location.pathname, 'Notificación', '¿Estas seguro de realizar la siguiente acción?', parameters, function () {
+                location.href = '{% url 'inicio' %}';
+            });
+        });
+    </script>
+{% endblock %}

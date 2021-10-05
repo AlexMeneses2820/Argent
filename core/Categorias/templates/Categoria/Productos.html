@@ -1,0 +1,46 @@
+{% extends 'body.html' %}
+{% load static %}
+{% block content %}
+    <div class="content-wrapper">
+            <!--cartas cabezera-->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+                <h3 class="card-title"><strong><i>{{ title }}</i></strong></h3>
+              </div>
+                    <div class="card-body table-responsive p-0">
+                      <table class="table table-hover text-nowrap">
+                        <thead>
+                          <tr>
+                              <th>Nombre</th>
+                            <th>Imagen</th>
+                            <th>Cantidad</th>
+                            <th>Editar</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for a in object_list  %}
+         <tr>
+             <td>{{ a.Nombre }}</td>
+             <td class="text-center">
+                                 <img src="{{ a.get_image }}" class="direct-chat-img" style="width: 60px; height: 60px; float: left">
+                             </td>
+             <td>{{ a.Cantidad }}</td>
+             <td><a href="{% url 'Producto_editar' a.id %}" class="btn btn-outline-danger btn-xs"><i class="fas fa-edit"></i></a>
+                 <a href="{% url 'Producto_Eliminar' a.id %}" class="btn btn-outline-primary btn-xs"><i class="far fa-trash-alt"></i></a>
+             </td>
+         </tr>
+     {% endfor %}
+                        </tbody>
+                      <tfoot>
+                          <tfoot>
+        <td>
+    <div class="card-footer">
+        <a href="{% url 'Crear_producto' %}" class="btn btn-block btn-outline-success btn-flat btnTest"><i class="fab fa-autoprefixer"></i>
+            Nuevo registro
+        </a>
+                      </tfoot>
+                      </table>
+                    </div>
+{% endblock %}

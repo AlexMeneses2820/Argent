@@ -6,8 +6,9 @@ from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
-from core.Categorias.forms import CategoriaForm
-from core.Categorias.models import Categorias
+from core.Categorias.forms import CategoriaForm, ProductosForm
+from core.Categorias.models import Categorias, Producto2
+
 
 class CategoriaListview(ListView):
     template_name = 'Categoria/categoria.html'
@@ -56,4 +57,54 @@ class CategoriaDeleteView(DeleteView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title']= 'Eliminar Categoria'
+        return context
+
+
+#Productos
+class ProductoListview(ListView):
+    model = Producto2
+    template_name = 'Categoria/Productos.html'
+    success_url = reverse_lazy('Categoria')
+
+    #def get_queryset(self):
+
+     #   user = self.request.user
+
+      #  return super().get_queryset().filter(category_id = user)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Añade un producto nuevo'
+        return context
+
+class ProductoDeleteView(DeleteView):
+    model = Producto2
+    template_name = 'Categoria/delete2.html'
+    success_url = reverse_lazy('Produ')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Eliminar Producto'
+        return context
+class ProductoUpdateView(UpdateView):
+    model = Producto2
+    form_class = ProductosForm
+    template_name = 'Categoria/Producto_Create.html'
+    success_url = reverse_lazy('Produ')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Editar Producto'
+        context['action']= 'Editar'
+        return context
+
+class ProductoCreateView(CreateView):
+    model = Producto2
+    form_class = ProductosForm
+    template_name = 'Categoria/Producto_Create.html'
+    success_url = reverse_lazy('Produ')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Añadir un Producto Nuevo'
         return context

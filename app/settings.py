@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'core.Contactos',
     'core.Notificaciones',
     'core.Perfil',
-    'core.Productos',
     'core.Promociones',
     'core.Ventas',
     'core.login',

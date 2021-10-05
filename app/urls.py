@@ -34,25 +34,17 @@ urlpatterns = [
     path('', include('core.Contactos.urls')),
     path('', include('core.Notificaciones.urls')),
     path('', include('core.Perfil.urls')),
-    path('', include('core.Productos.urls')),
     path('', include('core.Promociones.urls')),
     path('', include('core.Ventas.urls')),
     path('', include('core.login.urls')),
     path('', include('core.user.urls')),
-
-    path('Bienvenida/', Bienvenida),
-    path('cambiarcontraseña/', cambiarcontraseña),
+    #Ajustes
     path('Carnes/', Carnes),
     path('Azucar/', Azucar),
-    path('EditarPerfil/', EditarPerfil),
     path('Frutas/', Frutas),
     path('Granos/', Granos),
-    path('Iniciar_seccion/', Iniciar_seccion),
     path('Lacteos/', Lacteos),
-    path('Olvide_contraseña/', Olvide_contraseña),
     path('Refrescos/', Refrescos),
     path('Registro/', Registro),
-
 ]
-
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
