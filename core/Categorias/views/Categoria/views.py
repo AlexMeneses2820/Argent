@@ -82,10 +82,10 @@ class ProductoListview(ListView):
     #    return Producto2.get_all_products();
 
 #    def get_queryset(self):
-#
+
  #       Producto2 = self.request.Productos2
-#
- #       return super().get_queryset().filter(category_id = Producto2)
+
+  #      return super().get_queryset().filter(category_id = Producto2)
 
 
     def get_context_data(self, **kwargs):
