@@ -66,26 +66,11 @@ class ProductoListview(ListView):
     template_name = 'Categoria/Productos.html'
     success_url = reverse_lazy('Categoria')
 
-#@staticmethod
-#def get_products_by_id(ids):
-  #  return Producto2.objects.filter(id__in=ids)
 
-#@staticmethod
-#def get_all_products():
- #   return Producto2.objects.all()
 
-#@staticmethod
-#def get_all_products_by_categoryid(category_id):
- #   if category_id:
-  #      return Producto2.objects.filter(category=category_id)
-   # else:
-    #    return Producto2.get_all_products();
-
-#    def get_queryset(self):
-
- #       Producto2 = self.request.Productos2
-
-  #      return super().get_queryset().filter(category_id = Producto2)
+    def get_queryset(self):
+        id = self.kwargs['pk']
+        return super().get_queryset().filter(category_id = id)
 
 
     def get_context_data(self, **kwargs):
@@ -96,7 +81,7 @@ class ProductoListview(ListView):
 class ProductoDeleteView(DeleteView):
     model = Producto2
     template_name = 'Categoria/delete2.html'
-    success_url = reverse_lazy('Produ')
+    success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -118,7 +103,7 @@ class ProductoCreateView(CreateView):
     model = Producto2
     form_class = ProductosForm
     template_name = 'Categoria/Producto_Create.html'
-    success_url = reverse_lazy('Produ')
+    success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
