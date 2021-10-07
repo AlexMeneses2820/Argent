@@ -46,11 +46,12 @@
 
         <div class="collapse navbar-collapse order-3" id="navbarCollapse">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            </li>
+
             <li class="nav-item d-none d-sm-inline-block">
-              <a href="{% url 'inicio' %}" class="nav-link">Inicio</a>
+              <a href="{% url 'inicio' %}" class="nav-link"><i>Inicio</i></a>
+            </li>
+              <li class="nav-item d-none d-sm-inline-block">
+              <a href="{% url 'Promociones' %}" class="nav-link"><i>Promociónes<i class="fas fa-tags"></i></i></a>
             </li>
 
           </ul>
@@ -60,86 +61,10 @@
         <!-- Right navbar links -->
         <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
 
-      <!-- Mensajes Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">4</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="{% url 'Chat' %}" class="dropdown-item">
-            <!-- Raúl Álvarez Genes -->
-            <div class="media">
-              <img src="{% static 'img/Usuarios principales/Auron.jpeg' %}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Raúl Álvarez Genes
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Recuerda la reunión que tenemos en la tarde</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  hace 4 horas</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="{% url 'Chat' %}" class="dropdown-item">
-            <!-- Mensaje de Maria -->
-            <div class="media">
-              <img src="{% static 'img/Usuarios principales/Maria.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Maria Isabel P.
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Necesito los informes de ventas antes del martes</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  hace 4 horas</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="{% url 'Chat' %}" class="dropdown-item">
-            <!-- Mensaje de Melissa -->
-            <div class="media">
-              <img src="{% static 'img/Usuarios principales/Melissa.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Melissa Yapura
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">¿Puedes explicarme el funcionamiento del software?</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> hace 4 horas</p>
-              </div>
-            </div>
-            <!-- Message End -->
-            <div class="dropdown-divider"></div>
-            <a href="{% url 'Chat' %}" class="dropdown-item">
-              <!-- Mensaje de Jazmine -->
-              <div class="media">
-                <img src="{% static 'img/Usuarios principales/Jazmine.jpeg' %}" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                <div class="media-body">
-                  <h3 class="dropdown-item-title">
-                    Jazmine Herrera Catalano
-                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                  </h3>
-                  <p class="text-sm">Hola Alex, Deseó obtener el software que han desarrollado</p>
-                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  hace 8 horas</p>
-                </div>
-              </div>
-              <!-- Message End -->
-
-
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="{% url 'Chat' %}" class="dropdown-item dropdown-footer">Ver todos los mensajes</a>
-        </div>
-      </li>
-
         <!-- Notificaciones -->
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="far fa-bell"></i>
+            <i class="fas fa-exclamation-circle"></i>
             <span class="badge badge-warning navbar-badge">15</span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -224,16 +149,6 @@
               <i class="nav-icon far fa-user"></i>
               <p>
                 Perfil
-              </p>
-            </a>
-          </li>
-
-
-          <li class="nav-item">
-            <a href="{% url 'Chat' %}" class="nav-link">
-              <i class="nav-icon far fa-comments"></i>
-              <p>
-                Chat
               </p>
             </a>
           </li>

@@ -30,21 +30,11 @@ urlpatterns = [
     path('', include('core.Inicio.urls')),
     path('', include('core.Alerta.urls')),
     path('', include('core.Categorias.urls')),
-    path('', include('core.Chat.urls')),
-    path('', include('core.Contactos.urls')),
-    path('', include('core.Notificaciones.urls')),
     path('', include('core.Perfil.urls')),
     path('', include('core.Promociones.urls')),
     path('', include('core.Ventas.urls')),
     path('', include('core.login.urls')),
     path('', include('core.user.urls')),
-    #Ajustes
-    path('Carnes/', Carnes),
-    path('Azucar/', Azucar),
-    path('Frutas/', Frutas),
-    path('Granos/', Granos),
-    path('Lacteos/', Lacteos),
-    path('Refrescos/', Refrescos),
-    path('Registro/', Registro),
+
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

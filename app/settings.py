@@ -40,9 +40,7 @@ INSTALLED_APPS = [
     'core.Inicio',
     'core.Alerta',
     'core.Categorias',
-    'core.Chat',
-    'core.Contactos',
-    'core.Notificaciones',
+
     'core.Perfil',
     'core.Promociones',
     'core.Ventas',

@@ -87,11 +87,12 @@ class ProductoDeleteView(DeleteView):
         context = super().get_context_data(**kwargs)
         context['title']= 'Eliminar Producto'
         return context
+
 class ProductoUpdateView(UpdateView):
     model = Producto2
     form_class = ProductosForm
     template_name = 'Categoria/Producto_Create.html'
-    success_url = reverse_lazy('Produ')
+    success_url = reverse_lazy('Categoria')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

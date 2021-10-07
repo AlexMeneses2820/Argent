@@ -1,5 +1,5 @@
 from django.db import models
-from app.settings import MEDIA_URL
+from app.settings import MEDIA_URL, STATIC_URL
 from datetime import datetime
 
 class Categorias(models.Model):
@@ -10,6 +10,7 @@ class Categorias(models.Model):
     def get_image(self):
         if self.image:
             return '{}{}'.format(MEDIA_URL, self.image)
+        return '{}{}'.format(STATIC_URL,'img/None.jpg')
     class Meta:
         verbose_name = 'Categoria'
         verbose_name_plural = 'Categorias'
@@ -28,6 +29,7 @@ class Producto2(models.Model):
     def get_image(self):
         if self.imagen:
             return '{}{}'.format(MEDIA_URL, self.imagen)
+        return '{}{}'.format(STATIC_URL, 'img/None.jpg')
 
     class Meta:
         verbose_name = 'Producto'
