@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import *
+
+from core.Alerta.form import AlertaForm
 from core.Alerta.models import Alerta
 
 class AlertaListview(ListView):
@@ -19,4 +21,25 @@ class AlertaListview(ListView):
     def get_context_data(self,**kwargs):
         context =super().get_context_data(**kwargs)
         context['Alerta_url'] = reverse_lazy('Alerta')
+        return context
+
+class AlertaCreateView(CreateView):
+    model = Alerta
+    form_class = AlertaForm
+    template_name = 'Alerta/Create.html'
+    success_url = reverse_lazy('Alerta')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Añadir una Alerta'
+        return context
+
+class AlertaDeleteView(DeleteView):
+    model = Alerta
+    template_name = 'Alerta/delete.html'
+    success_url = reverse_lazy('Alerta')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Eliminar Alerta'
         return context

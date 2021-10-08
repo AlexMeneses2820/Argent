@@ -1,12 +1,17 @@
+from audioop import add
+
 from django.db import models
 from datetime import datetime
 
+from core.Categorias.models import Producto2
+
+
 class Alerta(models.Model):
-    Emergencia = models.CharField(max_length=200, verbose_name='Emergencia', unique=True)
-    Advertencia = models.CharField(max_length=200, verbose_name='Advertencia',unique=True)
-    Aviso = models.CharField(max_length=200, verbose_name='Aviso', unique=True)
+    Cantidad = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)
+    Producto = models.ForeignKey(Producto2, blank=True, null=True, on_delete=models.CASCADE)
+
     def __str__(self):
-        return self.Emergencia
+        return self.Producto
 
     class Meta:
         verbose_name = 'Alerta'
