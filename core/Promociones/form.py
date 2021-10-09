@@ -1,17 +1,17 @@
 from django.forms import ModelForm, TextInput
 
-from core.Alerta.models import Alerta
+from core.Promociones.models import Promociones
 
 
-class AlertaForm(ModelForm):
+class promocionForm(ModelForm):
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
 
     class Meta:
-        model= Alerta
+        model= Promociones
         fields='__all__'
         widgets = {
-            'Cantidad': TextInput(
+            'Producto': TextInput(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Ingrese Cantidad de Productos',
@@ -20,3 +20,4 @@ class AlertaForm(ModelForm):
             ),
         }
         exclude = ['user_updated', 'user_creation']
+

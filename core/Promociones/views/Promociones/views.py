@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import *
+
+from core.Promociones.form import promocionForm
 from core.Promociones.models import Promociones
 
 
@@ -20,4 +22,15 @@ class PromocionesListview(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['Promociones_url'] = reverse_lazy('Promociones')
+        return context
+
+class PromocionCreateView(CreateView):
+    model = Promociones
+    form_class = promocionForm
+    template_name = 'Alerta/Create.html'
+    success_url = reverse_lazy('Promociones')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Añadir una Promocion'
         return context

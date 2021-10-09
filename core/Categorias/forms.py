@@ -19,6 +19,7 @@ class CategoriaForm(ModelForm):
                 }
             ),
         }
+        exclude = ['user_updated', 'user_creation']
 
 class ProductosForm(ModelForm):
     def __init__(self,*args,**kwargs):
@@ -36,3 +37,4 @@ class ProductosForm(ModelForm):
                 }
             ),
         }
+        exclude = ['user_updated', 'user_creation']
