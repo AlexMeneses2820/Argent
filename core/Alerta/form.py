@@ -19,4 +19,3 @@ class AlertaForm(ModelForm):
                 }
             ),
         }
-        exclude = ['user_updated', 'user_creation']

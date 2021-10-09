@@ -27,7 +27,7 @@ class PromocionesListview(ListView):
 class PromocionCreateView(CreateView):
     model = Promociones
     form_class = promocionForm
-    template_name = 'Alerta/Create.html'
+    template_name = 'Promociones/create.html'
     success_url = reverse_lazy('Promociones')
 
     def get_context_data(self, **kwargs):

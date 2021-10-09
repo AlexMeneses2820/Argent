@@ -23,7 +23,7 @@ class AlertaListview(ListView):
         context['Alerta_url'] = reverse_lazy('Alerta')
         return context
 
-class AlertaCreateView(CreateView):
+class AlertasCreateView(CreateView):
     model = Alerta
     form_class = AlertaForm
     template_name = 'Alerta/Create.html'

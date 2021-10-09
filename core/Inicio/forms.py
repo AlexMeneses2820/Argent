@@ -21,7 +21,6 @@ class CategoryForm(ModelForm):
                 }
             ),
         },
-        exclude = ['user_updated', 'user_creation']
 
 class CargosForm(ModelForm):
     def __init__(self,*args,**kwargs):
@@ -39,4 +38,3 @@ class CargosForm(ModelForm):
                 }
             ),
         },
-        exclude = ['user_updated', 'user_creation']
