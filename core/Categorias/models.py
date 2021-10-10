@@ -19,13 +19,11 @@ class Categorias(models.Model):
 class Producto2(models.Model):
     Nombre = models.CharField(max_length=200, verbose_name='Producto', unique=True)
     imagen = models.ImageField(upload_to='imagen/%y/m/%d', null=True, blank=True)
-    Cantidad = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)
+    Cantidad = models.DecimalField(default=0.00, max_digits=9, decimal_places=2,null=True)
     category = models.ForeignKey(Categorias, blank=True, null=True, on_delete=models.CASCADE)
     def __str__(self):
         return self.Nombre
 
-    def __str__(self):
-        return self.Nombre
     def get_image(self):
         if self.imagen:
             return '{}{}'.format(MEDIA_URL, self.imagen)
