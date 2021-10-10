@@ -34,3 +34,27 @@ class PromocionCreateView(CreateView):
         context = super().get_context_data(**kwargs)
         context['title']= 'Añadir una Promocion'
         return context
+
+
+class PromocionDeleteView(DeleteView):
+    model = Promociones
+    template_name = 'Promociones/delete.html'
+    success_url = reverse_lazy('Promociones')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Eliminar Promocion'
+        return context
+
+class PromocionUpdateView(UpdateView):
+    model = Promociones
+    form_class = promocionForm
+    template_name = 'Promociones/create.html'
+    success_url = reverse_lazy('Promociones')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title']= 'Editar Promocion'
+        context['action']= 'Edit'
+        return context
+

@@ -35,166 +35,42 @@
 <div class="card card-success">
       <div class="card-body">
         <div class="row">
-        <!--producto 1-->
-          <div class="col-md-12 col-lg-6 col-xl-4">
-            <div class="card mb-2 bg-gradient-dark">
-              <img class="card-img-top" src="{% static 'img/Productos/Azucar/Mermeladas.png' %}" alt="Dist Photo 1" style="height: 263PX;">
-              <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <div class="ribbon-wrapper ribbon-lg">
-                  <div class="ribbon bg-success text-lg">
-                    <strong><i>-45%</i></strong>
-                  </div>
-                </div>
-                <a href="../../../../templates/Azucares.html"><h4><FONT COLOR="red"><strong><i>Mermelada</i></strong> </FONT></h4></a>
-                <h5><FONT COLOR="black"><i>Antes:12,000$ <br>
-                Ahora:6,600 $
-              </h5></i></FONT>
-              </div>
-            </div>
-          </div>
+{% block content %}
+<div class="card-body table-responsive p-0">
+<table class="table table-hover text-nowrap">
+<thead>
+  <tr>
+      <th>Imagen</th>
+    <th>Nombre de Producto</th>
+    <th>Precio Actual</th>
+    <th>Descuento</th>
+    <th>Editar</th>
+  </tr>
+</thead>
+<tbody>
+ <tr>
+     {% for p in object_list %}
 
-        <!--producto 2-->
-        <div class="col-md-12 col-lg-6 col-xl-4">
-          <div class="card mb-2 bg-gradient-dark">
-            <img class="card-img-top" src="{% static 'img/Productos/Frutas y verduras/piña.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
-            <div class="card-img-overlay d-flex flex-column justify-content-end">
-              <div class="ribbon-wrapper ribbon-lg">
-                <div class="ribbon bg-success text-lg">
-                  <strong><i>-25%</i></strong>
-                </div>
-              </div>
-              <a href="../../../../templates/Frutas_y_verduras.html"><h4><FONT COLOR="red"><strong><i>Piña</i></strong> </FONT></h4></a>
-              <h5><FONT COLOR="black"><i>Antes:7,000$ <br>
-              Ahora:5,250 $
-            </h5></i></FONT>
-            </div>
-          </div>
-        </div>
+             <td class="text-center">
+                 <img src="{{ p.get_image }}" class="direct-chat-img" style="width: 60px; height: 60px; float: left">
+             </td>
+      <td>{{ p.Productos }}</td>
+      <td>{{ p.Precio }}</td>
+      <td>{{ p.Descuento }}</td>
+         <td><a href="{% url 'Editar_Promociones' p.id %}" class="btn btn-primary btn-xs"><i class="fas fa-edit"></i></a>
+             <a href="{% url 'Eliminar_Promociones' p.id %}" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i></a>
+         </td>
+ </tr>
+{% endfor %}
+</tbody>
+<tfoot>
+  <tfoot>
 
-                <!--producto 3-->
-                <div class="col-md-12 col-lg-6 col-xl-4">
-                  <div class="card mb-2 bg-gradient-dark">
-                    <img class="card-img-top" src="{% static 'img/Productos/Frutas y verduras/mora.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end">
-                      <div class="ribbon-wrapper ribbon-lg">
-                        <div class="ribbon bg-success text-lg">
-                          <strong><i>-5%</i></strong>
-                        </div>
-                      </div>
-                      <a href="../../../../templates/Frutas_y_verduras.html"><h4><FONT COLOR="red"><strong><i>Mora</i></strong> </FONT></h4></a>
-                      <h5><FONT COLOR="black"><i>Antes:6,700$ <br>
-                      Ahora:6,365 $
-                    </h5></i></FONT>
-                    </div>
-                  </div>
-                </div>
 
-                        <!--producto 4-->
-        <div class="col-md-12 col-lg-6 col-xl-4">
-          <div class="card mb-2 bg-gradient-dark">
-            <img class="card-img-top" src="{% static 'img/Productos/Refrescos/Coca cola.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
-            <div class="card-img-overlay d-flex flex-column justify-content-end">
-              <div class="ribbon-wrapper ribbon-lg">
-                <div class="ribbon bg-success text-lg">
-                  <strong><i>-2%</i></strong>
-                </div>
-              </div>
-              <a href="../../../../templates/Refrescos.html"><h4><FONT COLOR="red"><strong><i>Coca-cola</i></strong> </FONT></h4></a>
-              <h5><FONT COLOR="black"><i>Antes:2,500$ <br>
-              Ahora:2,450 $
-            </h5></i></FONT>
-            </div>
-          </div>
-        </div>
-
-                  <!--producto 5-->
-        <div class="col-md-12 col-lg-6 col-xl-4">
-          <div class="card mb-2 bg-gradient-dark">
-            <img class="card-img-top" src="{% static 'img/Productos/Refrescos/Cerveza.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
-            <div class="card-img-overlay d-flex flex-column justify-content-end">
-              <div class="ribbon-wrapper ribbon-lg">
-                <div class="ribbon bg-success text-lg">
-                  <strong><i>-65%</i></strong>
-                </div>
-              </div>
-              <a href="../../../../templates/Refrescos.html"></a><h4><FONT COLOR="red"><strong><i>Cerveza</i></strong> </FONT></h4></a>
-              <h5><FONT COLOR="black"><i>Antes:5,000$ <br>
-              Ahora:1,750 $
-            </h5></i></FONT>
-            </div>
-          </div>
-        </div>
-                <!--producto 2-->
-                <div class="col-md-12 col-lg-6 col-xl-4">
-                  <div class="card mb-2 bg-gradient-dark">
-                    <img class="card-img-top" src="{% static 'img/Productos/Productos lacteos/Arequipe.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end">
-                      <div class="ribbon-wrapper ribbon-lg">
-                        <div class="ribbon bg-success text-lg">
-                          <strong><i>-12%</i></strong>
-                        </div>
-                      </div>
-                      <a href="../../../../templates/Lacteos.html"><h4><FONT COLOR="red"><strong><i>Arequipe</i></strong> </FONT></h4></a>
-                      <h5><FONT COLOR="black"><i>Antes:12,000$ <br>
-                      Ahora:10,560 $
-                    </h5></i></FONT>
-                    </div>
-                  </div>
-                </div>
-
-                        <!--producto 2-->
-        <div class="col-md-12 col-lg-6 col-xl-4">
-          <div class="card mb-2 bg-gradient-dark">
-            <img class="card-img-top" src="{% static 'img/Productos/Azucar/Miel.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
-            <div class="card-img-overlay d-flex flex-column justify-content-end">
-              <div class="ribbon-wrapper ribbon-lg">
-                <div class="ribbon bg-success text-lg">
-                  <strong><i>-37%</i></strong>
-                </div>
-              </div>
-              <a href="../../../../templates/Azucares.html"><h4><FONT COLOR="red"><strong><i>Miel</i></strong> </FONT></h4></a>
-              <h5><FONT COLOR="black"><i>Antes:37,000$ <br>
-              Ahora:23,310 $
-            </h5></i></FONT>
-            </div>
-          </div>
-        </div>
-
-                <!--producto 2-->
-                <div class="col-md-12 col-lg-6 col-xl-4">
-                  <div class="card mb-2 bg-gradient-dark">
-                    <img class="card-img-top" src="{% static 'img/Productos/Carnes/Mariscos/SUSHI.jpeg' %}" alt="Dist Photo 1" style="height: 263PX;">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end">
-                      <div class="ribbon-wrapper ribbon-lg">
-                        <div class="ribbon bg-success text-lg">
-                          <strong><i>-17%</i></strong>
-                        </div>
-                      </div>
-                      <a href="../../../../templates/Carnes.html"><h4><FONT COLOR="red"><strong><i>Sushi</i></strong> </FONT></h4></a>
-                      <h5><FONT COLOR="black"><i>Antes:30,000$ <br>
-                      Ahora:24,900 $
-                    </h5></i></FONT>
-                    </div>
-                  </div>
-                </div>
-
-                        <!--producto 2-->
-        <div class="col-md-12 col-lg-6 col-xl-4">
-          <div class="card mb-2 bg-gradient-dark">
-            <img class="card-img-top" src="{%  static 'img/Productos/Productos lacteos/Helado.jpg' %}" alt="Dist Photo 1" style="height: 263PX;">
-            <div class="card-img-overlay d-flex flex-column justify-content-end">
-              <div class="ribbon-wrapper ribbon-lg">
-                <div class="ribbon bg-success text-lg">
-                  <strong><i>-7%</i></strong>
-                </div>
-              </div>
-              <a href="../../../../templates/Lacteos.html"><h4><FONT COLOR="red"><strong><i>Helado</i></strong> </FONT></h4></a>
-              <h5><FONT COLOR="black"><i>Antes:1,500$ <br>
-              Ahora:1,488 $
-            </h5></i></FONT>
-            </div>
-          </div>
-        </div>
+</tfoot>
+</table>
+</div>
+{% endblock %}
 
 
         </div>

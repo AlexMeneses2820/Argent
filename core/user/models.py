@@ -12,7 +12,7 @@ class User(AbstractUser):
     def get_image(self):
         if self.image:
             return '{}{}'.format(MEDIA_URL, self.image)
-        return '{}{}'.format(STATIC_URL, 'img/None.png')
+        return '{}{}'.format(STATIC_URL, 'img/UsuarioBase.jpg')
 
 
 

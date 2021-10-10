@@ -10,7 +10,7 @@ class Categorias(models.Model):
     def get_image(self):
         if self.image:
             return '{}{}'.format(MEDIA_URL, self.image)
-        return '{}{}'.format(STATIC_URL,'img/None.jpg')
+        return '{}{}'.format(STATIC_URL,'img/Base.jpg')
     class Meta:
         verbose_name = 'Categoria'
         verbose_name_plural = 'Categorias'
@@ -19,7 +19,7 @@ class Categorias(models.Model):
 class Producto2(models.Model):
     Nombre = models.CharField(max_length=200, verbose_name='Producto', unique=True)
     imagen = models.ImageField(upload_to='imagen/%y/m/%d', null=True, blank=True)
-    Cantidad = models.DecimalField(default=0.00, max_digits=9, decimal_places=2,null=True)
+    Cantidad = models.DecimalField(default=0, max_digits=9, decimal_places=2,null=True)
     category = models.ForeignKey(Categorias, blank=True, null=True, on_delete=models.CASCADE)
     def __str__(self):
         return self.Nombre
@@ -27,7 +27,7 @@ class Producto2(models.Model):
     def get_image(self):
         if self.imagen:
             return '{}{}'.format(MEDIA_URL, self.imagen)
-        return '{}{}'.format(STATIC_URL, 'img/None.jpg')
+        return '{}{}'.format(STATIC_URL, 'img/Base.jpg')
 
     class Meta:
         verbose_name = 'Producto'
