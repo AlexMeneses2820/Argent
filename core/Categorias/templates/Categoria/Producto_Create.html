@@ -32,9 +32,12 @@
 
                       {% endif %}
 
-                          {% for field in form.visible_fields %}
-                          {{ field|add_class:'form-control' }}
-                          {% endfor %}
+                {% for field in form.visible_fields %}
+                    <div class="form-group">
+                        <label for="email">{{ field.label }}:</label>
+                        {{ field|add_class:'form-control'|attr:'autocomplete:off' }}
+                    </div>
+                {% endfor %}
                       </div>
                     <button type="submit" class="b|tn btn-outline-success btn-flat"><i class="fab fa-autoprefixer"></i>
                         Guardar registro

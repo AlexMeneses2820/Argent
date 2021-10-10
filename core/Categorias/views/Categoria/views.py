@@ -66,8 +66,6 @@ class ProductoListview(ListView):
     template_name = 'Categoria/Productos.html'
     success_url = reverse_lazy('Categoria')
 
-
-
     def get_queryset(self):
         id = self.kwargs['pk']
         return super().get_queryset().filter(category_id = id)
