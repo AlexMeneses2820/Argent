@@ -19,6 +19,7 @@ class CategoriaForm(ModelForm):
                 }
             ),
         }
+        exclude = ['user_creation', 'date_updated']
 
 
 class ProductosForm(ModelForm):
@@ -37,3 +38,4 @@ class ProductosForm(ModelForm):
                 }
             ),
         }
+        exclude = ['user_creation', 'date_updated']

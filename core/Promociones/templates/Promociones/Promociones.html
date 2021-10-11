@@ -56,7 +56,7 @@
              </td>
       <td>{{ p.Productos }}</td>
       <td>{{ p.Precio }}</td>
-      <td>{{ p.Descuento }}</td>
+      <td>{{ p.Descuento }} %</td>
          <td><a href="{% url 'Editar_Promociones' p.id %}" class="btn btn-primary btn-xs"><i class="fas fa-edit"></i></a>
              <a href="{% url 'Eliminar_Promociones' p.id %}" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i></a>
          </td>
