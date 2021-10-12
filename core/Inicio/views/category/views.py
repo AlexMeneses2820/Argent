@@ -31,6 +31,10 @@ class Category_ListView(ListView):
             #return redirect('erp:category_list')
         return super().dispatch(request,*args,**kwargs)
 
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id=user)
+
     #def post(self, request, *args, **kwargs):
      #   data={'name': 'Alex'}
       #  return JsonResponse(data)

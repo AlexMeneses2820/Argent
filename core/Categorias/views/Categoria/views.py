@@ -19,6 +19,10 @@ class CategoriaListview(ListView):
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id = user)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Categoria de productos'
@@ -70,6 +74,9 @@ class ProductoListview(ListView):
         id = self.kwargs['pk']
         return super().get_queryset().filter(category_id = id)
 
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id=user)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

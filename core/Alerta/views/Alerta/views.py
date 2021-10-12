@@ -18,6 +18,10 @@ class AlertaListview(ListView):
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id=user)
+
     def get_context_data(self,**kwargs):
         context =super().get_context_data(**kwargs)
         context['Alerta_url'] = reverse_lazy('Alerta')
